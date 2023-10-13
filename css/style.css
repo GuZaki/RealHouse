@@ -1,0 +1,239 @@
+/*fonts*/
+@import url("https://fonts.googleapis.com/css?family=IBM+Plex+Sans:regular,500,600");
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/Gilroy-Regular.woff") format("woff"), url("../fonts/Gilroy-Medium.woff") format("woff"), url("../fonts/Gilroy-SemiBold.woff") format("woff"), url("../fonts/Gilroy-Bold.woff") format("woff") url("../fonts/Gilroy-ExtraBold.woff") format("woff");
+}
+/*default*/
+html {
+  --container: 1324px;
+  --padding-container: 15px;
+  --bg-color: #171616;
+  --bg-accent: #232121;
+  --accent: #C7954B;
+  --hover: #A87429;
+  --active: #B58640;
+  --text-color: #ffffff;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: var(--bg-color);
+  background-image: url("/img/background.svg");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  margin: 0;
+}
+body.lock {
+  overflow: hidden;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+button {
+  padding: 0;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+h1,
+h2,
+h3,
+p,
+figure {
+  margin: 0;
+}
+
+iframe {
+  border: none;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.visually-hidden {
+  position: fixed;
+  transform: scale(0);
+}
+
+.container {
+  max-width: calc(var(--container) + var(--padding-container) * 2);
+  padding: 0 var(--padding-container);
+  margin: 0 auto;
+}
+
+@media (max-width: 320px) {
+  html {
+    --container: 290px;
+  }
+}
+/*header*/
+.header {
+  position: relative;
+  padding-top: 84px;
+}
+@media (max-width: 768px) {
+  .header {
+    padding-top: 28px;
+  }
+}
+.header__container {
+  font-family: "Gilroy", sans-serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--text-color);
+  height: 59px;
+}
+.header__logo {
+  max-width: 210px;
+}
+@media (max-width: 320px) {
+  .header__logo {
+    width: 135px;
+  }
+}
+.header__right {
+  display: flex;
+  justify-content: space-between;
+  gap: 60px;
+}
+.header__contact {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+.header__contact span {
+  color: var(--text-color);
+  font-size: 27px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  letter-spacing: 0.7px;
+}
+.header__contact .grey {
+  color: rgba(255, 255, 255, 0.5);
+}
+.header__contact a {
+  color: var(--accent);
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+}
+@media (max-width: 768px) {
+  .header__contact {
+    display: none;
+  }
+}
+.header__menu-icon {
+  display: block;
+  position: relative;
+  width: 35px;
+  height: 25px;
+  align-self: center;
+  z-index: 5;
+  cursor: pointer;
+}
+@media (max-width: 320px) {
+  .header__menu-icon {
+    width: 22px;
+    height: 15px;
+  }
+}
+.header__menu-icon span {
+  position: absolute;
+  top: calc(50% - 2px);
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--text-color);
+  transition: all 0.3s ease 0s;
+}
+@media (max-width: 320px) {
+  .header__menu-icon span {
+    top: calc(50% - 1px);
+    height: 1px;
+  }
+}
+.header__menu-icon span:first-child {
+  top: 0;
+}
+.header__menu-icon span:last-child {
+  top: auto;
+  bottom: 0;
+}
+.header__menu-icon.active span {
+  transform: scale(0);
+}
+.header__menu-icon.active span:first-child {
+  transform: rotate(-45deg);
+  top: calc(50% - 1px);
+}
+.header__menu-icon.active span:last-child {
+  transform: rotate(45deg);
+  bottom: calc(50% - 1px);
+}
+.header__navigation {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  right: -100%;
+  background-color: var(--bg-accent);
+  overflow: auto;
+  transition: all 0.8s;
+}
+.header__navigation.active {
+  right: 0;
+}
+.header__navigation-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin: auto;
+  padding: 30px;
+}
+.header__navigation a {
+  display: block;
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 70px;
+}/*# sourceMappingURL=style.css.map */

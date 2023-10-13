@@ -1,0 +1,11 @@
+/*fonts*/
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans:regular,500,600');
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('../fonts/Gilroy-Regular.woff') format('woff'),
+        url('../fonts/Gilroy-Medium.woff') format('woff'),
+        url('../fonts/Gilroy-SemiBold.woff') format('woff'),
+        url('../fonts/Gilroy-Bold.woff') format('woff')
+        url('../fonts/Gilroy-ExtraBold.woff') format('woff');
+}
