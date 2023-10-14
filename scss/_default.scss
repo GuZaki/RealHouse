@@ -22,6 +22,7 @@ body {
     min-width: 320px;
     min-height: 100vh;
     background-color: var(--bg-color);
+    color: var(--text-color);
     background-image: url('/img/background.svg');
     background-repeat: no-repeat;
     background-position: top;
@@ -50,11 +51,13 @@ button {
     background: transparent;
     border: none;
     cursor: pointer;
+    transition: all 0.5s ease 0s;
 }
 
 a {
     text-decoration: none;
     color: inherit;
+    transition: all 0.5s ease 0s;
 }
 
 ul {
@@ -85,15 +88,19 @@ fieldset {
     border: none;
 }
 
-.visually-hidden {
-    position: fixed;
-    transform: scale(0);
-}
+// .visually-hidden {
+//     position: fixed;
+//     transform: scale(0);
+// }
 
 .container {
     max-width: calc(var(--container) + (var(--padding-container) * 2));
     padding: 0 var(--padding-container);
     margin: 0 auto;
+}
+
+.gold{
+    color: var(--accent);
 }
 
 @media (max-width: 320px) {

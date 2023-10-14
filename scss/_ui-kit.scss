@@ -1,0 +1,21 @@
+/*UI kit*/
+a{
+    &:hover{
+        color: var(--hover);
+    }
+
+    &:active{
+        color: var(--active);
+    }
+}
+
+button{
+    &:hover{
+        background-color: var(--hover);
+    }
+
+    &:active{
+        background-color: var(--active);
+    }
+}
+
