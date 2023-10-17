@@ -1,13 +1,32 @@
 $font-Gilroy: 'Gilroy', sans-serif;
 $font-IBM: 'IBM Plex Sans', sans-serif;
 
-// @mixin button{
-//     width: 316px;
-//     height: 19px;
-//     padding: 27.5px 0px;
-//     color: var(--bg-color);
-//     text-align: center;
-//     font-family: $font-Gilroy;
-//     font-size: 16px;
-//     font-weight: 500;
-// }
+@mixin btn{
+    font-family: $font-Gilroy;
+    width: 316px;
+    height: 74px;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--bg-color);
+    background-color: var(--accent);
+}
+
+@mixin title{
+    font-family: $font-Gilroy;
+    font-size: 64px;
+    font-weight: 800;
+    line-height: 80px;
+}
+
+@mixin subtitle{
+    font-family: $font-Gilroy;
+    font-size: 44px;
+    font-weight: 800;
+}
+
+@mixin text{
+    font-family: $font-IBM;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+}

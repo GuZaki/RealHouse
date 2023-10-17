@@ -6,17 +6,19 @@
     <title>RealHouse</title>
 
     <link rel="stylesheet" href="css/style.css">
-    <script defer src="script.js"></script>
+    <script defer src="js/script.js"></script>
 </head>
 <body>
     <header class="header">
         <div class="container header__container">
-            <img class="header__logo" src="img/logo.svg" alt="Логотип RealHouse">
-
+            <div class="header__logo">
+                <img src="../img/logo.svg" alt="RealHouse">
+            </div>
+            
             <div class="header__right">
                 <div class="header__contact">
-                    <span><span class="grey">+7 (495)</span> 764 26 14</span> 
-                    <a href="tel:+7(495)7642614">Бесплатная консультация</a>
+                    <a class="link" href="tel:+7(495)7642614"><span class="grey">+7 (495)</span> 764 26 14</a> 
+                    <button class="header__contact-btn">Бесплатная консультация</button>
                 </div>
                     
                 <div class="header__menu-icon">
@@ -42,15 +44,17 @@
     </header>
 
     <main>
-        <section class="container info__container">
-            <h1 class="info__title">
-                Поможем <span class="gold">выгодно</span> и <span class="gold">безопасно</span> купить или продать вашу квартиру в краткие сроки
-            </h1>
-            <p class="info__text">
-                Оставьте заявку на бесплатный подбор квартиры и <span class="gold">получите скидку 15%</span> на её покупку
-            </p>
+        <section class="info">
+            <div class="container">
+                <h1 class="title info__title">
+                    Поможем <span>выгодно</span> и <span>безопасно</span> купить или продать вашу квартиру в краткие сроки
+                </h1>
+                <p class="info__text">
+                    Оставьте заявку на бесплатный подбор квартиры и <span>получите скидку 15%</span> на её покупку
+                </p>
 
-            <button class="info__btn">Оставить заявку</button>
+                <button class="btn info__btn">Оставить заявку</button>
+            </div>
         </section>
     </main>
     <footer></footer>

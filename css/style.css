@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*fonts*/
 @import url("https://fonts.googleapis.com/css?family=IBM+Plex+Sans:regular,500,600");
 @font-face {
@@ -28,7 +29,7 @@ body {
   min-height: 100vh;
   background-color: var(--bg-color);
   color: var(--text-color);
-  background-image: url("/img/background.svg");
+  background-image: url("../img/background.svg");
   background-repeat: no-repeat;
   background-position: top;
   background-size: cover;
@@ -92,13 +93,30 @@ fieldset {
   border: none;
 }
 
+section {
+  padding: 84px 0;
+}
+@media (max-width: 768px) {
+  section {
+    padding: 100px;
+  }
+}
+@media (max-width: 320px) {
+  section {
+    padding: 74px;
+  }
+}
+
 .container {
   max-width: calc(var(--container) + var(--padding-container) * 2);
   padding: 0 var(--padding-container);
   margin: 0 auto;
 }
 
-.gold {
+h1 span,
+h2 span,
+h3 span,
+p span {
   color: var(--accent);
 }
 
@@ -111,7 +129,7 @@ fieldset {
 .header {
   position: relative;
   padding-top: 84px;
-  margin-bottom: 129px;
+  margin-bottom: 45px;
 }
 @media (max-width: 768px) {
   .header {
@@ -150,7 +168,7 @@ fieldset {
   flex-direction: column;
   align-items: end;
 }
-.header__contact span {
+.header__contact a {
   color: var(--text-color);
   font-size: 27px;
   font-weight: 700;
@@ -160,7 +178,7 @@ fieldset {
 .header__contact .grey {
   color: rgba(255, 255, 255, 0.5);
 }
-.header__contact a {
+.header__contact-btn {
   color: var(--accent);
   font-family: "IBM Plex Sans", sans-serif;
   font-weight: 400;
@@ -219,7 +237,7 @@ fieldset {
   bottom: calc(50% - 1px);
 }
 .header__navigation {
-  position: absolute;
+  position: fixed;
   display: flex;
   width: 100%;
   height: 100vh;
@@ -243,7 +261,6 @@ fieldset {
   display: block;
   font-size: 25px;
   font-weight: 800;
-  line-height: 70px;
 }
 
 /*UI kit*/
@@ -261,27 +278,30 @@ button:active {
   background-color: var(--active);
 }
 
+.header__contact-btn:hover {
+  color: var(--hover);
+  background-color: transparent;
+}
+.header__contact-btn:active {
+  color: var(--active);
+  background-color: transparent;
+}
+
+.link span:hover {
+  color: var(--hover);
+}
+.link span:active {
+  color: var(--active);
+}
+
 /*info section*/
-.info__container {
-  margin-bottom: 168px;
-}
-@media (max-width: 768px) {
-  .info__container {
-    margin-bottom: 100px;
-  }
-}
-@media (max-width: 320px) {
-  .info__container {
-    margin-bottom: 74px;
-  }
-}
 .info__title {
   max-width: 1093px;
+  margin-bottom: 40px;
   font-family: "Gilroy", sans-serif;
   font-size: 64px;
   font-weight: 800;
   line-height: 80px;
-  margin-bottom: 40px;
 }
 @media (max-width: 768px) {
   .info__title {
@@ -334,12 +354,14 @@ button:active {
 .info__btn {
   font-family: "Gilroy", sans-serif;
   width: 316px;
-  height: 90px;
-  padding: 33px 45px;
-  font-size: 20px;
-  font-weight: 600;
+  height: 74px;
+  font-size: 16px;
+  font-weight: 500;
   color: var(--bg-color);
   background-color: var(--accent);
+  height: 90px;
+  font-size: 20px;
+  font-weight: 600;
 }
 @media (max-width: 345px) {
   .info__btn {
@@ -349,4 +371,41 @@ button:active {
     padding: 22.5px 45px;
     font-size: 16px;
   }
-}/*# sourceMappingURL=style.css.map */
+}
+
+/*    
+Ссылка на макет: https://www.figma.com/file/bxxhdDCzzunmRjgShx6qv5/RealHouse-for-HTML-Practice?node-id=0%3A1&mode=dev
+
+Вопросы:
+
+1. В body при применении background-image результат не совпадает с макетом, не могу разобраться почему.
+    background-image: url('../img/background.svg');
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+
+2. Создала единый класс для конопок btn, но кнопка в блоке info отличается по размерам (высота и шрифт) от остальных, лучше отдельно стили прописывать для нее 
+или переопределить необходимые стили (но тогда в стилях получается два раза прописано свойство)?
+
+@mixin btn{
+    font-family: $font-Gilroy;
+    width: 316px;
+    height: 74px;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--bg-color);
+    background-color: var(--accent);
+}
+
+для info__btn
+	&__btn {
+        @include btn; 
+        height: 90px;
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+3. В header, где ссылка на номер телефона, при состоянии :hover не могу понять, как изменить цвет span одновременно со сылкой. 
+Меняется только у ссылки вне span или только если курсор наведен на span
+
+*//*# sourceMappingURL=style.css.map */

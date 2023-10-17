@@ -19,3 +19,25 @@ button{
     }
 }
 
+.header__contact-btn{
+    &:hover{
+        color: var(--hover);
+        background-color: transparent;
+    }
+
+    &:active{
+        color: var(--active);
+        background-color: transparent;
+    }
+}
+
+.link span {
+    &:hover{
+        color: var(--hover);
+    }
+
+    &:active{
+        color: var(--active);
+    }
+}
+

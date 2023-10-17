@@ -23,7 +23,7 @@ body {
     min-height: 100vh;
     background-color: var(--bg-color);
     color: var(--text-color);
-    background-image: url('/img/background.svg');
+    background-image: url('../img/background.svg');
     background-repeat: no-repeat;
     background-position: top;
     background-size: cover;
@@ -93,14 +93,33 @@ fieldset {
 //     transform: scale(0);
 // }
 
+section{
+    padding: 84px 0;
+
+    @media(max-width: 768px){
+        padding: 100px;
+    }
+
+    @media(max-width: 320px){
+        padding: 74px;
+    }
+}
+
+
+
 .container {
     max-width: calc(var(--container) + (var(--padding-container) * 2));
     padding: 0 var(--padding-container);
     margin: 0 auto;
 }
 
-.gold{
-    color: var(--accent);
+h1, 
+h2, 
+h3, 
+p{
+    & span{
+        color: var(--accent);
+    }
 }
 
 @media (max-width: 320px) {
@@ -108,18 +127,3 @@ fieldset {
         --container: 290px;
     }
 }
-
-
-// @media (min-width: 1024px) {
-//     html {
-//         --container: 960px;
-//         --padding-container: 32px;
-//     }
-// }
-
-// @media (min-width: 1360px) {
-//     html {
-//         --container: 1290px;
-//         /* --padding-container: 75px; */
-//     }
-// }

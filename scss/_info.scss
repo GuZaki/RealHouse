@@ -1,26 +1,10 @@
 /*info section*/
 .info {
-	// .info__container
-	&__container {
-        margin-bottom: 168px;
-
-        @media(max-width: 768px){
-            margin-bottom: 100px;
-        }
-
-        @media(max-width: 320px){
-            margin-bottom: 74px;
-        }
-	}
-
 	// .info__title
 	&__title {
         max-width: 1093px;
-        font-family: $font-Gilroy;
-        font-size: 64px;
-        font-weight: 800;
-        line-height: 80px;
         margin-bottom: 40px;
+        @include title;
 
         @media(max-width: 768px){
             font-size: 45px;
@@ -69,14 +53,10 @@
 
 	// .info__btn
 	&__btn {
-        font-family: $font-Gilroy;
-        width: 316px;
+        @include btn; 
         height: 90px;
-        padding: 33px 45px;
         font-size: 20px;
         font-weight: 600;
-        color: var(--bg-color);
-        background-color: var(--accent);
         
         @media(max-width: 345px){
             display: block;
@@ -87,4 +67,6 @@
         }
 	}
 }
+
+
 
