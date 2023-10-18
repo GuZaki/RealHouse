@@ -1,0 +1,29 @@
+/*consult section*/
+
+.consult {
+    &__subtitle {
+        margin-bottom: 33px;
+        max-width: 644px;
+
+        @media(max-width: 1024px){
+            margin-bottom: 25px;
+        }
+    }
+
+    &__text{
+        margin-bottom: 47px;
+        max-width: 600px;
+
+        @media(max-width: 1024px){
+            margin-bottom: 35px;
+        }
+    }
+}
+
+.agreement{
+    & a{
+        text-decoration: underline;
+        color: var(--accent);
+    }
+}
+

@@ -1,30 +1,34 @@
 /*info section*/
+
 .info {
-	// .info__title
 	&__title {
         max-width: 1093px;
         margin-bottom: 40px;
-        @include title;
 
-        @media(max-width: 768px){
+        @media(max-width: 1024px){
+            font-size: 58px;
+            line-height: 1.2;
+        }
+
+        @media(max-width: 992px){
             font-size: 45px;
-            line-height: 60px;
+            line-height: 1.2;
         }
 
         @media(max-width: 425px){
-            text-align: center;
             font-size: 32px;
             line-height: 40px;
+            margin-bottom: 25px;
         }
 
         @media(max-width: 320px){
+            text-align: center;
             font-size: 28px;
             line-height: 36px;
             margin-bottom: 12px;
         }
 	}
 
-	// .info__text
 	&__text {
         max-width: 654px;
         font-family: $font-IBM;
@@ -33,16 +37,19 @@
         line-height: 44px;
         margin-bottom: 73px;
 
-        @media(max-width: 768px){
-            font-size: 25px;
-            line-height: 40px;
+        @media(max-width: 1024px){
+            font-size: 24px;
+        }
+
+        @media(max-width: 992px){
+            font-size: 22px;
+            line-height: 1.4;
             margin-bottom: 50px;
         }
 
         @media(max-width: 425px){
             font-size: 20px;
-            line-height: 30px;
-            margin-bottom: 28px;
+            margin-bottom: 24px;
         }
         
         @media(max-width: 320px){
@@ -51,22 +58,23 @@
         }
 	}
 
-	// .info__btn
 	&__btn {
         @include btn; 
         height: 90px;
         font-size: 20px;
         font-weight: 600;
+
+        @media(max-width: 992px){
+            width: 290px;
+            height: 70px;
+        }
         
         @media(max-width: 345px){
             display: block;
-            width: 290px;
             height: 64px;
-            padding: 22.5px 45px;
             font-size: 16px;
         }
 	}
 }
-
 
 

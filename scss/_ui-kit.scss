@@ -19,7 +19,7 @@ button{
     }
 }
 
-.header__contact-btn{
+.header__contact-btn, .contact-btn{
     &:hover{
         color: var(--hover);
         background-color: transparent;

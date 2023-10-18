@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /*fonts*/
 @import url("https://fonts.googleapis.com/css?family=IBM+Plex+Sans:regular,500,600");
 @font-face {
@@ -96,14 +95,19 @@ fieldset {
 section {
   padding: 84px 0;
 }
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   section {
-    padding: 100px;
+    padding: 50px 0;
+  }
+}
+@media (max-width: 992px) {
+  section {
+    padding: 40px 0;
   }
 }
 @media (max-width: 320px) {
   section {
-    padding: 74px;
+    padding: 37px 0;
   }
 }
 
@@ -111,6 +115,123 @@ section {
   max-width: calc(var(--container) + var(--padding-container) * 2);
   padding: 0 var(--padding-container);
   margin: 0 auto;
+}
+
+h1 {
+  font-family: "Gilroy", sans-serif;
+  font-size: 64px;
+  font-weight: 800;
+  line-height: 80px;
+}
+
+h2 {
+  font-family: "Gilroy", sans-serif;
+  font-size: 44px;
+  font-weight: 800;
+}
+@media (max-width: 1024px) {
+  h2 {
+    font-size: 32px;
+  }
+}
+@media (max-width: 320px) {
+  h2 {
+    text-align: center;
+    font-size: 24px;
+  }
+}
+
+h3 {
+  font-family: "Gilroy", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.text {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+@media (max-width: 1024px) {
+  .text {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+
+.btn {
+  font-family: "Gilroy", sans-serif;
+  width: 316px;
+  height: 74px;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--bg-color);
+  background-color: var(--accent);
+}
+@media (max-width: 425px) {
+  .btn {
+    width: 290px;
+  }
+}
+
+.form {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  flex-wrap: wrap;
+  row-gap: 8px;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  max-width: 988px;
+}
+@media (max-width: 1024px) {
+  .form {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 14px;
+    justify-content: space-between;
+    align-items: start;
+  }
+}
+
+.input {
+  width: 316px;
+  padding: 27.5px 36px;
+  border: 1px solid var(--text-color);
+  background-color: transparent;
+  outline: none;
+  color: var(--text-color);
+  font-size: 16px;
+  font-weight: 500;
+  font-family: "Gilroy", sans-serif;
+  color: rgba(255, 255, 255, 0.5);
+}
+@media (max-width: 425px) {
+  .input {
+    width: 290px;
+  }
+}
+
+.agreement {
+  font-family: "IBM Plex Sans", sans-serif;
+  max-width: 316px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  color: rgba(255, 255, 255, 0.5);
+}
+@media (max-width: 320px) {
+  .agreement {
+    text-align: center;
+  }
+}
+
+.contact-btn {
+  color: var(--accent);
+  font-family: "Gilroy", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
 }
 
 h1 span,
@@ -125,21 +246,58 @@ p span {
     --container: 290px;
   }
 }
+/*UI kit*/
+a:hover {
+  color: var(--hover);
+}
+a:active {
+  color: var(--active);
+}
+
+button:hover {
+  background-color: var(--hover);
+}
+button:active {
+  background-color: var(--active);
+}
+
+.header__contact-btn:hover, .contact-btn:hover {
+  color: var(--hover);
+  background-color: transparent;
+}
+.header__contact-btn:active, .contact-btn:active {
+  color: var(--active);
+  background-color: transparent;
+}
+
+.link span:hover {
+  color: var(--hover);
+}
+.link span:active {
+  color: var(--active);
+}
+
 /*header*/
 .header {
   position: relative;
   padding-top: 84px;
   margin-bottom: 45px;
 }
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
+  .header {
+    padding-top: 50px;
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 992px) {
   .header {
     padding-top: 28px;
-    margin-bottom: 79px;
+    margin-bottom: 20px;
   }
 }
 @media (max-width: 320px) {
   .header {
-    margin-bottom: 36px;
+    margin-bottom: 0;
   }
 }
 .header__container {
@@ -257,67 +415,48 @@ p span {
   margin: auto;
   padding: 30px;
 }
+.header__navigation ul li + li {
+  margin-top: 50px;
+}
+@media (max-width: 320px) {
+  .header__navigation ul {
+    width: 100%;
+    padding: 20px;
+  }
+}
 .header__navigation a {
   display: block;
   font-size: 25px;
   font-weight: 800;
 }
 
-/*UI kit*/
-a:hover {
-  color: var(--hover);
-}
-a:active {
-  color: var(--active);
-}
-
-button:hover {
-  background-color: var(--hover);
-}
-button:active {
-  background-color: var(--active);
-}
-
-.header__contact-btn:hover {
-  color: var(--hover);
-  background-color: transparent;
-}
-.header__contact-btn:active {
-  color: var(--active);
-  background-color: transparent;
-}
-
-.link span:hover {
-  color: var(--hover);
-}
-.link span:active {
-  color: var(--active);
-}
-
 /*info section*/
 .info__title {
   max-width: 1093px;
   margin-bottom: 40px;
-  font-family: "Gilroy", sans-serif;
-  font-size: 64px;
-  font-weight: 800;
-  line-height: 80px;
 }
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
+  .info__title {
+    font-size: 58px;
+    line-height: 1.2;
+  }
+}
+@media (max-width: 992px) {
   .info__title {
     font-size: 45px;
-    line-height: 60px;
+    line-height: 1.2;
   }
 }
 @media (max-width: 425px) {
   .info__title {
-    text-align: center;
     font-size: 32px;
     line-height: 40px;
+    margin-bottom: 25px;
   }
 }
 @media (max-width: 320px) {
   .info__title {
+    text-align: center;
     font-size: 28px;
     line-height: 36px;
     margin-bottom: 12px;
@@ -331,18 +470,22 @@ button:active {
   line-height: 44px;
   margin-bottom: 73px;
 }
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .info__text {
-    font-size: 25px;
-    line-height: 40px;
+    font-size: 24px;
+  }
+}
+@media (max-width: 992px) {
+  .info__text {
+    font-size: 22px;
+    line-height: 1.4;
     margin-bottom: 50px;
   }
 }
 @media (max-width: 425px) {
   .info__text {
     font-size: 20px;
-    line-height: 30px;
-    margin-bottom: 28px;
+    margin-bottom: 24px;
   }
 }
 @media (max-width: 320px) {
@@ -363,49 +506,258 @@ button:active {
   font-size: 20px;
   font-weight: 600;
 }
+@media (max-width: 425px) {
+  .info__btn {
+    width: 290px;
+  }
+}
+@media (max-width: 992px) {
+  .info__btn {
+    width: 290px;
+    height: 70px;
+  }
+}
 @media (max-width: 345px) {
   .info__btn {
     display: block;
-    width: 290px;
     height: 64px;
-    padding: 22.5px 45px;
     font-size: 16px;
   }
 }
 
-/*    
-Ссылка на макет: https://www.figma.com/file/bxxhdDCzzunmRjgShx6qv5/RealHouse-for-HTML-Practice?node-id=0%3A1&mode=dev
-
-Вопросы:
-
-1. В body при применении background-image результат не совпадает с макетом, не могу разобраться почему.
-    background-image: url('../img/background.svg');
-    background-repeat: no-repeat;
-    background-position: top;
-    background-size: cover;
-
-2. Создала единый класс для конопок btn, но кнопка в блоке info отличается по размерам (высота и шрифт) от остальных, лучше отдельно стили прописывать для нее 
-или переопределить необходимые стили (но тогда в стилях получается два раза прописано свойство)?
-
-@mixin btn{
-    font-family: $font-Gilroy;
-    width: 316px;
-    height: 74px;
+/*about section*/
+.about__container {
+  display: flex;
+  gap: 132px;
+}
+@media (max-width: 1240px) {
+  .about__container {
+    gap: 35px;
+  }
+}
+@media (max-width: 992px) {
+  .about__container {
+    gap: 20px;
+  }
+}
+@media (max-width: 768px) {
+  .about__container {
+    flex-direction: column;
+  }
+}
+.about__img {
+  min-width: 50%;
+}
+.about__right {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  max-width: 540px;
+  padding-top: 48px;
+}
+@media (max-width: 1068px) {
+  .about__right {
+    padding-top: 0;
+  }
+}
+.about__description {
+  margin-bottom: 62px;
+}
+@media (max-width: 1068px) {
+  .about__description {
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 320px) {
+  .about__description {
+    margin-bottom: 12px;
+  }
+}
+.about__subtitle {
+  margin-bottom: 28px;
+}
+@media (max-width: 1068px) {
+  .about__subtitle {
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 320px) {
+  .about__subtitle {
+    align-self: center;
+  }
+}
+.about__text:first-child {
+  margin-bottom: 16px;
+}
+.about__progress {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: 49px;
+}
+@media (max-width: 1068px) {
+  .about__progress {
+    row-gap: 19px;
+  }
+}
+.about__progress-text {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-self: baseline;
+}
+@media (max-width: 992px) {
+  .about__progress-text {
+    gap: 2px;
+  }
+}
+.about__progress-text:nth-child(even) {
+  max-width: 204px;
+}
+.about__progress-text p {
+  font-size: 20px;
+  width: 218px;
+}
+@media (max-width: 992px) {
+  .about__progress-text p {
     font-size: 16px;
-    font-weight: 500;
-    color: var(--bg-color);
-    background-color: var(--accent);
+  }
+}
+@media (max-width: 425px) {
+  .about__progress-text p {
+    width: 135px;
+    text-align: center;
+  }
+}
+.about__progress-text p span {
+  font-family: "Gilroy", sans-serif;
+}
+.about__progress-text p span sup {
+  font-size: 35px;
+}
+@media (max-width: 992px) {
+  .about__progress-text p span sup {
+    font-size: 20px;
+  }
+}
+@media (max-width: 425px) {
+  .about__progress-text p span sup {
+    font-size: 14px;
+  }
+}
+.about__progress-text .text {
+  max-width: 208px;
+}
+@media (max-width: 425px) {
+  .about__progress-text .text {
+    text-align: center;
+  }
+}
+.about__progress-text span {
+  font-size: 56px;
+  font-weight: 400;
+}
+@media (max-width: 992px) {
+  .about__progress-text span {
+    font-size: 32px;
+  }
 }
 
-для info__btn
-	&__btn {
-        @include btn; 
-        height: 90px;
-        font-size: 20px;
-        font-weight: 600;
-    }
+/*consult section*/
+.consult__subtitle {
+  margin-bottom: 33px;
+  max-width: 644px;
+}
+@media (max-width: 1024px) {
+  .consult__subtitle {
+    margin-bottom: 25px;
+  }
+}
+.consult__text {
+  margin-bottom: 47px;
+  max-width: 600px;
+}
+@media (max-width: 1024px) {
+  .consult__text {
+    margin-bottom: 35px;
+  }
+}
 
-3. В header, где ссылка на номер телефона, при состоянии :hover не могу понять, как изменить цвет span одновременно со сылкой. 
-Меняется только у ссылки вне span или только если курсор наведен на span
+.agreement a {
+  text-decoration: underline;
+  color: var(--accent);
+}
 
-*//*# sourceMappingURL=style.css.map */
+/*features section*/
+.features__container ul {
+  display: flex;
+  justify-content: space-between;
+  max-width: 100%;
+  gap: 20px;
+}
+@media (max-width: 1440px) {
+  .features__container ul {
+    gap: 0;
+  }
+}
+@media (max-width: 1340px) {
+  .features__container ul {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 58px;
+  }
+}
+.features__container ul li {
+  height: 254px;
+  min-width: calc(var(--container) / 3);
+}
+.features__container ul li p {
+  margin-bottom: 24px;
+}
+.features__icon {
+  margin-bottom: 32px;
+}
+@media (max-width: 470px) {
+  .features__icon {
+    width: 56px;
+    height: 56px;
+    margin-bottom: 12px;
+  }
+}
+@media (max-width: 320px) {
+  .features__icon {
+    margin: 0 auto 12px;
+  }
+}
+.features__subtitle {
+  max-width: 440px;
+  margin-bottom: 50px;
+}
+.features__headline {
+  margin-bottom: 16px;
+}
+@media (max-width: 320px) {
+  .features__headline {
+    text-align: center;
+  }
+}
+.features__text {
+  height: 72px;
+  max-width: calc(var(--container) / 3);
+}
+@media (max-width: 470px) {
+  .features__text {
+    max-width: 100%;
+  }
+}
+@media (max-width: 320px) {
+  .features__text {
+    text-align: center;
+  }
+}
+@media (max-width: 320px) {
+  .features__contact-btn {
+    display: block;
+    margin: 0 auto;
+  }
+}/*# sourceMappingURL=style.css.map */

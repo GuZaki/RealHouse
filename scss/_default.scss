@@ -96,21 +96,75 @@ fieldset {
 section{
     padding: 84px 0;
 
-    @media(max-width: 768px){
-        padding: 100px;
+    @media(max-width: 1024px){
+        padding: 50px 0;
+    }
+
+    @media(max-width: 992px){
+        padding: 40px 0;
     }
 
     @media(max-width: 320px){
-        padding: 74px;
+        padding: 37px 0;
     }
 }
-
-
 
 .container {
     max-width: calc(var(--container) + (var(--padding-container) * 2));
     padding: 0 var(--padding-container);
     margin: 0 auto;
+}
+
+h1{
+    font-family: $font-Gilroy;
+    font-size: 64px;
+    font-weight: 800;
+    line-height: 80px;
+}
+
+h2{
+    font-family: $font-Gilroy;
+    font-size: 44px;
+    font-weight: 800;
+
+    @media(max-width: 1024px){
+        font-size: 32px;
+    }
+
+    @media(max-width: 320px){
+        text-align: center;
+        font-size: 24px;
+    }
+}
+
+h3{
+    font-family: $font-Gilroy;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.text{
+    @include text;
+}
+
+.btn{
+    @include btn;
+}
+
+.form{
+    @include form;
+}
+
+.input{
+    @include input;
+}
+
+.agreement{
+    @include agreement;
+}
+
+.contact-btn{
+    @include contact-btn;
 }
 
 h1, 
