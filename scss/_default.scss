@@ -9,13 +9,12 @@ html {
     --hover: #A87429;
     --active: #B58640;
     --text-color: #ffffff;
-    box-sizing: border-box;
 }
 
 *,
 *:before,
 *:after {
-    box-sizing: inherit;
+    box-sizing: border-box;
 }
 
 body {
@@ -24,10 +23,13 @@ body {
     background-color: var(--bg-color);
     color: var(--text-color);
     background-image: url('../img/background.svg');
-    background-repeat: no-repeat;
+    // background-repeat: no-repeat;
+    background-repeat: repeat-y;
+    // background-size: cover;
+    background-size: 100%;
     background-position: top;
-    background-size: cover;
     margin: 0;
+    padding: 0;
 
     &.lock{
         overflow: hidden;
@@ -131,7 +133,7 @@ h2{
         font-size: 32px;
     }
 
-    @media(max-width: 320px){
+    @media(max-width: 425px){
         text-align: center;
         font-size: 24px;
     }
@@ -145,6 +147,10 @@ h3{
 
 .text{
     @include text;
+}
+
+.btn_big{
+    @include btn_big;
 }
 
 .btn{

@@ -1,0 +1,128 @@
+/*catalog section*/
+
+.catalog {
+
+        // .catalog__top
+        &__top {
+            display: flex;
+            justify-content: space-between;
+            align-items: end;
+            margin-bottom: 44px;
+        }
+    
+        // .catalog__subtitle
+        &__subtitle {
+            max-width: 418px;
+        }
+    
+        // .catalog__link
+        &__link {
+            color: var(--accent);
+            text-decoration: underline;
+        }
+    
+        // .catalog__btn
+        &__btn {
+            display: flex;
+            gap: 25px;
+            cursor: pointer;
+        }
+
+    // .catalog__swiper
+
+    &__swiper {
+        position: relative;
+    }
+
+    // .catalog__swiper-wrapper
+    &__swiper-wrapper {
+        height: 688px;
+        margin-bottom: 44px;
+    }
+
+    // .catalog__slide
+    &__slide {
+        display: flex;
+        justify-content: space-between; 
+        flex-wrap: wrap;     
+        gap: 20px;
+        height: 100%;
+        
+    }
+
+    // .catalog__card
+    &__card {
+        width: 428px;
+        height: 100%;
+        font-family: $font-Gilroy;
+        position: relative;  
+        
+        &:after {
+            content: '';
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0; 
+            left: 0;
+            background: linear-gradient(to bottom, transparent 0%,  rgba(0,0,0,0.5) 50%);
+        }
+    }
+
+    &___swiper-pagination{
+            position: absolute;
+            left: 0;
+            top: auto;
+            width: 100%;
+            height: 15px;
+            background-color: #fff;
+        }
+}
+
+.card {
+    &__info{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 32px 42px 32px;
+        height: 100%;
+    }
+    
+    &__img {
+        position: absolute;
+        z-index: -5;
+        // filter: brightness(80%);
+
+        &::before {
+            content: '';
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0; left: 0;
+            background: linear-gradient(to bottom, transparent 0%,  rgba(0,0,0,0.5) 50%);
+        }
+    }
+        
+    &__price {
+        font-size: 32px;
+        font-weight: 700;
+        letter-spacing: 1.92px;
+        text-transform: uppercase;
+    }
+    
+    &__name {
+        font-size: 20px;
+        font-weight: 700;
+        letter-spacing: 0.2px;
+        margin-bottom: 8px;
+    }
+    
+    &__adress {
+        color: rgba(#fff, 0.5);
+        font-family: $font-IBM;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 0.16px;
+    }
+}
+

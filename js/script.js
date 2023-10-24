@@ -14,9 +14,29 @@ if(menu && menuBtn) {
 
     menu.querySelectorAll('a').forEach(link => {
         link.addEventListener('click', () => {
-            menu.classList.remove('active');
+        menu.classList.remove('active');
         menuBtn.classList.remove('active');
         body.classList.remove('lock');
         })
     })
 }
+
+// Initialize Swiper
+
+var swiper = new Swiper(".catalog__swiper", {
+    slidesPerView: 3,
+    spaceBetween: 20,
+
+    // loop: true,
+    // loopedSlides:3,
+
+    pagination: {
+        el: ".catalog__swiper-pagination",
+        clickable: true,
+    },
+    navigation: {
+        nextEl: ".catalog__btn_right",
+        prevEl: ".catalog__btn_left",
+    },
+});
+

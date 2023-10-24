@@ -1,6 +1,28 @@
 $font-Gilroy: 'Gilroy', sans-serif;
 $font-IBM: 'IBM Plex Sans', sans-serif;
 
+@mixin btn_big{
+    font-family: $font-Gilroy;
+    width: 316px;
+    height: 90px;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--bg-color);
+    background-color: var(--accent);
+
+    @media(max-width: 992px){
+        width: 290px;
+        height: 70px;
+    }
+    
+    @media(max-width: 425px){
+        display: block;
+        height: 64px;
+        font-size: 16px;
+    }
+
+}
+
 @mixin btn{
     font-family: $font-Gilroy;
     width: 316px;
@@ -25,6 +47,10 @@ $font-IBM: 'IBM Plex Sans', sans-serif;
         font-size: 14px;
         line-height: 22px;
     }
+
+    @media(max-width: 425px){
+        text-align: center;
+    }
 }
 
 @mixin form{
@@ -44,7 +70,9 @@ $font-IBM: 'IBM Plex Sans', sans-serif;
         align-items: start;
     }
 
-    
+    @media(max-width: 425px){
+        align-items: center;
+    }
 }
 
 @mixin input{
@@ -58,6 +86,23 @@ $font-IBM: 'IBM Plex Sans', sans-serif;
     font-weight: 500;
     font-family: $font-Gilroy;
     color: rgba(#fff, 0.50);
+
+    &::-webkit-input-placeholder {
+        color: #a0a0a9;
+    }
+    &::-moz-placeholder {
+        color: #a0a0a9;
+    }
+    &:-moz-placeholder {
+        color: #a0a0a9;
+    }
+    &:-ms-input-placeholder {
+        color: #a0a0a9;
+    }
+    &:focus {
+        border-color: #ffffff;
+        color: #fff;
+    }
     
     @media(max-width: 425px){
         width: 290px;
@@ -72,7 +117,7 @@ $font-IBM: 'IBM Plex Sans', sans-serif;
     line-height: 18px; 
     color: rgba(#fff, 0.50);
 
-    @media(max-width: 320px){
+    @media(max-width: 425px){
         text-align: center;
     }
 }
