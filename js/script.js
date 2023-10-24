@@ -31,7 +31,7 @@ var swiper = new Swiper(".catalog__swiper", {
     // loopedSlides:3,
 
     pagination: {
-        el: ".catalog__swiper-pagination",
+        el: ".swiper-pagination",
         clickable: true,
     },
     navigation: {

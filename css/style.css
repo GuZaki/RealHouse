@@ -816,13 +816,27 @@ button:active {
   left: 0;
   background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.5) 50%);
 }
-.catalog___swiper-pagination {
-  position: absolute;
-  left: 0;
-  top: auto;
-  width: 100%;
+.catalog__bottom {
+  position: relative;
   height: 15px;
-  background-color: #fff;
+}
+
+.swiper-pagination-bullet {
+  border: 1px solid var(--accent);
+  background-color: transparent;
+}
+.swiper-pagination-bullet:active {
+  background: var(--accent);
+}
+.swiper-pagination-bullet:focus {
+  background: var(--accent);
+}
+.swiper-pagination-bullet:hover {
+  background: var(--accent);
+}
+
+.swiper-pagination {
+  bottom: 0;
 }
 
 .card__info {
