@@ -55,7 +55,7 @@
                     Оставьте заявку на бесплатный подбор квартиры и <span>получите скидку 15%</span> на её покупку
                 </p>
 
-                <button class="btn_big info__btn">Оставить заявку</button>
+                <button class="btn_big info__btn modal-open">Оставить заявку</button>
             </div>
         </section>
 
@@ -112,7 +112,7 @@
                 <form class="form consult__form" action="">
                     <input class="input" type="text" placeholder="Ваше имя">
                     <input class="input" type="tel" placeholder="Ваш телефон">
-                    <button class="btn">Оставить заявку</button>
+                    <button class="btn consult__btn modal-open">Оставить заявку</button>
                     <p class="agreement">Нажимая на кнопку, вы даёте согласие на обработку <a href="#"><span>персональных данных</span></a></p>
                 </form>    
             </div>
@@ -158,126 +158,194 @@
         </section>
 
         <section class="catalog">
-            <div class="container catalog__swiper swiper">
+            
+            <div class="container">
                 <div class="catalog__top">
                     <h2 class="catalog__subtitle">ТОП-15 квартир из нашего <a class="catalog__link" href="#">каталога</a></h2>
-                    <div class="catalog__btn">
-                        <div class="catalog__btn_left">
+                    <div class="catalog__arrows">
+                        <div class="catalog__arrow-prew">
                             <svg width="51" height="16" viewBox="0 0 51 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M0.292892 8.70711C-0.0976295 8.31658 -0.0976295 7.68342 0.292892 7.29289L6.65685 0.928932C7.04738 0.538408 7.68054 0.538408 8.07107 0.928932C8.46159 1.31946 8.46159 1.95262 8.07107 2.34315L2.41422 8L8.07107 13.6569C8.46159 14.0474 8.46159 14.6805 8.07107 15.0711C7.68054 15.4616 7.04738 15.4616 6.65685 15.0711L0.292892 8.70711ZM51 9H1V7H51V9Z" fill="#C7954B"/>
                             </svg>
                         </div>
-                        <div class="catalog__btn_right">
+                        <div class="catalog__arrow-next">
                             <svg width="51" height="16" viewBox="0 0 51 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M50.7071 8.70711C51.0976 8.31658 51.0976 7.68342 50.7071 7.29289L44.3431 0.928932C43.9526 0.538408 43.3195 0.538408 42.9289 0.928932C42.5384 1.31946 42.5384 1.95262 42.9289 2.34315L48.5858 8L42.9289 13.6569C42.5384 14.0474 42.5384 14.6805 42.9289 15.0711C43.3195 15.4616 43.9526 15.4616 44.3431 15.0711L50.7071 8.70711ZM0 9H50V7H0L0 9Z" fill="#C7954B"/>
                             </svg>
                         </div>
                     </div> 
                 </div>
-
-                <div class="catalog__swiper-wrapper swiper-wrapper">
-                    <div class="catalog__slide swiper-slide">
-                        <div class="catalog__card">
-                            <img class="card__img" src="./img/catalog/catalog_img_01.png" alt="">
-                            <div class="card__info">
-                                <p class="card__price">10 450 000 ₽</p>
-                                <div>
-                                    <p class="card__name">2-комнатная квартира 59 м2</p>
-                                    <p class="card__adress">Москва, район Митино, ул. Муравская, д. 128 ст. метро Войковская</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 
-                    <div class="catalog__slide swiper-slide">
-                        <div class="catalog__card">
-                            <img class="card__img" src="./img/catalog/catalog_img_02.png" alt="">
-                            <div class="card__info">
-                                    <p class="card__price">8 400 000 ₽</p>
-                                <div>
-                                    <p class="card__name">1-комнатная квартира 36 м2</p>
-                                    <p class="card__adress">Москва, район Войковский, ул. Макарова, д. 8 ст. метро Тимирязевская</p>
+                <div class="catalog__swiper swiper">
+                    <div class="catalog__swiper-wrapper swiper-wrapper">
+                        <div class="catalog__slide swiper-slide">
+                            <div class="catalog__card">
+                                <img class="card__img" src="./img/catalog/catalog_img_01.png" alt="">
+                                <div class="card__info">
+                                    <p class="card__price">10 450 000 ₽</p>
+                                    <div class="card__block">
+                                        <p class="card__name">2-комнатная квартира 59 м<sup>2</sup></p>
+                                        <address class="card__adress">Москва, район Митино, ул. Муравская, д. 128 ст. метро Войковская</address>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    
+                        <div class="catalog__slide swiper-slide">
+                            <div class="catalog__card">
+                                <img class="card__img" src="./img/catalog/catalog_img_02.png" alt="">
+                                <div class="card__info">
+                                        <p class="card__price">8 400 000 ₽</p>
+                                    <div class="card__block">
+                                        <p class="card__name">1-комнатная квартира 36 м<sup>2</sup></p>
+                                        <address class="card__adress">Москва, район Войковский, ул. Макарова, д. 8 ст. метро Тимирязевская</address>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
-                    <div class="catalog__slide swiper-slide">
-                        <div class="catalog__card">
-                            <img class="card__img" src="./img/catalog/catalog_img_03.png" alt="">
-                            <div class="card__info">
-                                <p class="card__price">9 800 000 ₽</p>
-                                <div>
-                                    <p class="card__name">2-комнатная квартира 50 м2</p>
-                                    <p class="card__adress">Москва, улица Ивана Сусанина, д. 16 ст. метро Селигерская</p>
+                        <div class="catalog__slide swiper-slide">
+                            <div class="catalog__card">
+                                <img class="card__img" src="./img/catalog/catalog_img_03.png" alt="">
+                                <div class="card__info">
+                                    <p class="card__price">9 800 000 ₽</p>
+                                    <div class="card__block">
+                                        <p class="card__name">2-комнатная квартира 50 м<sup>2</sup></p>
+                                        <address class="card__adress">Москва, улица Ивана Сусанина, д. 16 ст. метро Селигерская</address>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="catalog__slide swiper-slide">
-                        <div class="catalog__card">
-                            <img class="card__img" src="./img/catalog/catalog_img_01.png" alt="">
-                            <div class="card__info">
-                                <p class="card__price">10 450 000 ₽</p>
-                                <div>
-                                    <p class="card__name">2-комнатная квартира 59 м2</p>
-                                    <p class="card__adress">Москва, район Митино, ул. Муравская, д. 128 ст. метро Войковская</p>
+                        <div class="catalog__slide swiper-slide">
+                            <div class="catalog__card">
+                                <img class="card__img" src="./img/catalog/catalog_img_01.png" alt="">
+                                <div class="card__info">
+                                    <p class="card__price">10 450 000 ₽</p>
+                                    <div class="card__block">
+                                        <p class="card__name">2-комнатная квартира 59 м<sup>2</sup></p>
+                                        <address class="card__adress">Москва, район Митино, ул. Муравская, д. 128 ст. метро Войковская</address>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="catalog__slide swiper-slide">
+                            <div class="catalog__card">
+                                <img class="card__img" src="./img/catalog/catalog_img_02.png" alt="">
+                                <div class="card__info">
+                                        <p class="card__price">8 400 000 ₽</p>
+                                    <div class="card__block">
+                                        <p class="card__name">1-комнатная квартира 36 м<sup>2</sup></p>
+                                        <address class="card__adress">Москва, район Войковский, ул. Макарова, д. 8 ст. метро Тимирязевская</address>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                
-                    <div class="catalog__slide swiper-slide">
-                        <div class="catalog__card">
-                            <img class="card__img" src="./img/catalog/catalog_img_02.png" alt="">
-                            <div class="card__info">
-                                    <p class="card__price">8 400 000 ₽</p>
-                                <div>
-                                    <p class="card__name">1-комнатная квартира 36 м2</p>
-                                    <p class="card__adress">Москва, район Войковский, ул. Макарова, д. 8 ст. метро Тимирязевская</p>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="catalog__bottom">
+                        <div class="catalog__bottom-swiper-pagination swiper-pagination"></div>
                     </div>
-
-                    <div class="catalog__slide swiper-slide">
-                        <div class="catalog__card">
-                            <img class="card__img" src="./img/catalog/catalog_img_03.png" alt="">
-                            <div class="card__info">
-                                <p class="card__price">9 800 000 ₽</p>
-                                <div>
-                                    <p class="card__name">2-комнатная квартира 50 м2</p>
-                                    <p class="card__adress">Москва, улица Ивана Сусанина, д. 16 ст. метро Селигерская</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="catalog__slide swiper-slide">
-                        <div class="catalog__card">
-                            <img class="card__img" src="./img/catalog/catalog_img_01.png" alt="">
-                            <div class="card__info">
-                                <p class="card__price">10 450 000 ₽</p>
-                                <div>
-                                    <p class="card__name">2-комнатная квартира 59 м2</p>
-                                    <p class="card__adress">Москва, район Митино, ул. Муравская, д. 128 ст. метро Войковская</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="catalog__bottom">
-                    <div class="catalog__bottom-swiper-pagination swiper-pagination"></div>
-                </div>
-                
-                
+                </div>                
             </div> 
         </section>
+
+        <section class="partners">
+            <div class="container partners__container">
+                <div class="partner__item">
+                    <img class="partner__img" src="./img/banks/sber-logo.svg" alt="">
+                </div>
+                <div class="partner__item">
+                    <img class="partner__img" src="./img/banks/alfa-logo.svg" alt="">
+                </div>
+                <div class="partner__item">
+                    <img class="partner__img" src="./img/banks/sov-logo.svg" alt="">
+                </div>
+                <div class="partner__item">
+                    <img class="partner__img" src="./img/banks/gazpr-logo.svg" alt="">
+                </div>
+                <div class="partner__item">
+                    <img class="partner__img" src="./img/banks/vtb-logo.svg" alt="">
+                </div>
+            </div>
+        </section>
         
+        <section class="guarantee">
+            <div class="container guarantee__container">
+                <div class="guarantee__left">
+                    <h2 class="guarantee__subtitle">Работая с нами, вы получаете гарантии</h2>
+                    <h3 class="guarantee__text">Ключевые проблемы, с которыми сталкиваются клиенты в других агентствах</h3>
+                    <ul class="guarantee__list">
+                        <li class="text guarantee__list-item">Некоторые компании ограничивают выбор для своих покупателей, не предоставляя информацию о квартирах</li>
+                        <li class="text guarantee__list-item">Безответственное отношение к оформлению документов создаёт для покупателя дополнительные риски</li>
+                        <li class="text guarantee__list-item">Сотрудничая с ненадёжным застройщиком, покупатель рискует стать жертвой долгостроя</li>
+                        <li class="text guarantee__list-item">Ошибки при оформлении ипотечных карт могут обернуться срывом сделки и потерей брони на выбранную квартиру</li>
+                    </ul>
+                </div>
+
+                <div class="guarantee__right">
+                    <div class="guarantee__right-wrap">
+                        <div class="guarantee__right-icon">
+                            <img src="./img/guarantee/choice-icon.svg" alt="">
+                        </div>
+                        <h3 class="guarantee__headline">Большой выбор квартир</h3>
+                        <p class="text guarantee__text">Тщательно подберём для вас квартиру, проверим документы на юридическую чистоту</p>
+                    </div>
+
+                    <div class="guarantee__right-wrap">
+                        <div class="guarantee__right-icon">
+                            <img src="./img/guarantee/talk-icon.svg" alt="">
+                        </div>
+                        <h3 class="guarantee__headline">Берём всю рутину на себя</h3>
+                        <p class="text guarantee__text">Вы не тратите своё время — все переговоры мы ведём сами, без вашего участия</p>
+                    </div>
+
+                    <div class="guarantee__right-wrap">
+                        <div class="guarantee__right-icon">
+                            <img src="./img/guarantee/insurance-icon.svg" alt="">
+                        </div>
+                        <h3 class="guarantee__headline">Юридическое сопровождение</h3>
+                        <p class="text guarantee__text">Окажем бесплатное юридическое сопровождение во время сделки и после регистрации прав собственности</p>
+                    </div>
+
+                    <div class="guarantee__right-wrap">
+                        <div class="guarantee__right-icon">
+                            <img src="./img/guarantee/cash-icon.svg" alt="">
+                        </div>
+                        <h3 class="guarantee__headline">Оплата после завершения сделки</h3>
+                        <p class="text guarantee__text">Мы не требуем вносить предоплату, все консультации и сервисы компании бесплатны. Вы платите только после завершения сделки</p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
     <footer></footer>
 
+
+    <div class="modal__info modal">
+        <div class="modal__wrap">
+            <div class="modal__body">
+                <div class="modal__close-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="67" height="68" viewBox="0 0 67 68" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M33.5781 31.1716L3.20327 0.796727L0.374846 3.62515L30.7497 34L0.374846 64.3748L3.20327 67.2033L33.5781 36.8284L64.0145 67.2648L66.8429 64.4363L36.4065 34L66.8429 3.56366L64.0145 0.735237L33.5781 31.1716Z" fill="#C7954B"/>
+                    </svg>
+                </div>
+                <div class="modal__content">
+                    <h2 class="modal__subtitle">Оставьте заявку</h2>
+                    <p class="modal__text text">на бесплатный подбор квартиры<br> и <span>получите скидку 15%</span> на её покупку.</p>        
+                    <form class="form consult__form modal__form" action="">
+                        <input class="input" type="text" placeholder="Ваше имя">
+                        <input class="input" type="tel" placeholder="Ваш телефон">
+                        <button class="btn consult__btn">Оставить заявку</button>
+                        <p class="agreement">Нажимая на кнопку, вы даёте согласие на обработку <a href="#"><span>персональных данных</span></a></p>
+                    </form>    
+                </div>
+            </div>
+            
+            
+        </div>
+
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 </body>

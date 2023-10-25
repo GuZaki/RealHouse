@@ -2,45 +2,50 @@
 
 .catalog {
 
-        // .catalog__top
-        &__top {
-            display: flex;
-            justify-content: space-between;
-            align-items: end;
-            margin-bottom: 44px;
-        }
-    
-        // .catalog__subtitle
-        &__subtitle {
-            max-width: 418px;
-        }
-    
-        // .catalog__link
-        &__link {
-            color: var(--accent);
-            text-decoration: underline;
-        }
-    
-        // .catalog__btn
-        &__btn {
-            display: flex;
-            gap: 25px;
-            cursor: pointer;
-        }
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+        margin-bottom: 46px;
 
-    // .catalog__swiper
+        @media(max-width: 425px){
+            margin-bottom: 22px;
+        }
+    }
+
+    &__subtitle {
+        max-width: 418px;
+    }
+    
+    &__link {
+        color: var(--accent);
+        text-decoration: underline;
+    }
+    
+    &__arrows {
+        display: flex;
+        gap: 25px;
+        cursor: pointer;
+
+        @media(max-width: 800px){
+            display: none;
+        }
+    }
 
     &__swiper {
         position: relative;
     }
 
-    // .catalog__swiper-wrapper
     &__swiper-wrapper {
         height: 688px;
         margin-bottom: 44px;
+
+        @media(max-width: 425px){
+            margin-bottom: 24px;
+            height: 499px;                     
+        }
     }
 
-    // .catalog__slide
     &__slide {
         display: flex;
         justify-content: space-between; 
@@ -48,14 +53,18 @@
         gap: 20px;
         height: 100%;
         
+        @media(max-width: 1200px){
+            justify-content: center;
+        }
     }
 
-    // .catalog__card
     &__card {
         width: 428px;
         height: 100%;
         font-family: $font-Gilroy;
-        position: relative;  
+        position: relative;
+        z-index: 10;
+    
         
         &:after {
             content: '';
@@ -65,37 +74,47 @@
             top: 0; 
             left: 0;
             background: linear-gradient(to bottom, transparent 0%,  rgba(0,0,0,0.5) 50%);
+            z-index: -1;
         }
     }
 
     &__bottom{
         position: relative;
-        height: 15px;
-
+        height: 18px;
+        margin: 0 auto;
+        
+        &-swiper-pagination{
+            bottom: 0 !important;
+        }
     }
 }
 
+.swiper-pagination{
 
-    .swiper-pagination-bullet{
+    &-bullet{
         border: 1px solid var(--accent);
         background-color: transparent;
+        margin: 0 7px!important;
+        height: 12px;
+        width: 12px;
         
-            &:active{
-                background: var(--accent);
-            }
+        @media(max-width: 425px){
+            height: 10px;
+            width: 10px; 
+            margin: 0 4px!important;             
+        }
 
-            &:focus{
-                background: var(--accent);
-            }
+        &:focus{
+            background: var(--accent);
+            height: 15px;
+            width: 15px;
 
-            &:hover{
-                background: var(--accent);
+            @media(max-width: 425px){
+                height: 12px;
+                width: 12px; 
             }
+        }
     }
-
-.swiper-pagination{
-    bottom: 0;
-    
 } 
 
 .card {
@@ -103,14 +122,14 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        padding: 32px 42px 32px;
+        padding: 35px 30px 32px 35px;
         height: 100%;
     }
     
     &__img {
         position: absolute;
         z-index: -5;
-        // filter: brightness(80%);
+        object-fit: cover;
 
         &::before {
             content: '';
@@ -127,6 +146,12 @@
         font-weight: 700;
         letter-spacing: 1.92px;
         text-transform: uppercase;
+
+        @media(max-width: 425px){
+            text-align: center;
+            font-size: 24px;
+            letter-spacing: 1.44px;                    
+        }
     }
     
     &__name {
@@ -134,6 +159,15 @@
         font-weight: 700;
         letter-spacing: 0.2px;
         margin-bottom: 8px;
+
+        @media(max-width: 425px){
+            text-align: center;
+            font-size: 16px;                    
+        }
+
+        & sup{
+            font-size: 12px;
+        }
     }
     
     &__adress {
@@ -143,8 +177,12 @@
         font-weight: 400;
         line-height: 24px;
         letter-spacing: 0.16px;
+        font-style: normal;
+
+        @media(max-width: 425px){
+            text-align: center; 
+            font-size: 12px;
+            line-height: 16px;                  
+        }
     }
-
-
 }
-
