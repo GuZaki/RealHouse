@@ -1,0 +1,53 @@
+/*credit-help section*/
+
+.credit-help {
+
+	&__container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+
+        @media(max-width: 925px){
+            flex-direction: column;
+        }
+	}
+
+	&__left {
+        max-width: 652px;
+        padding-top: 135px;
+
+        @media(max-width: 925px){
+            padding-top: 0;
+        }
+	}
+
+	&__subtitle {
+        margin-bottom: 28px;
+
+        @media(max-width: 925px){
+            margin-bottom: 20px;
+        }
+	}
+
+	&__description {
+        margin-bottom: 48px;
+
+        @media(max-width: 925px){
+            margin-bottom: 12px;
+        }
+	}
+
+	&__text {
+        &:first-child{
+            margin-bottom: 15px;
+        }
+
+        @media(max-width: 425px){
+            text-align: start;        
+        }
+	}
+
+	&__btn {
+	}
+}
+

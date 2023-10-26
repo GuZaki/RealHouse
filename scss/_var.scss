@@ -20,7 +20,6 @@ $font-IBM: 'IBM Plex Sans', sans-serif;
         height: 64px;
         font-size: 16px;
     }
-
 }
 
 @mixin btn{
@@ -35,6 +34,12 @@ $font-IBM: 'IBM Plex Sans', sans-serif;
     @media(max-width: 425px){
         width: 290px;
     }
+}
+
+@mixin contact-btn{
+    color: var(--accent);
+    font-family: $font-Gilroy;
+    font-weight: 600;
 }
 
 @mixin text{
@@ -122,9 +127,35 @@ $font-IBM: 'IBM Plex Sans', sans-serif;
     }
 }
 
-@mixin contact-btn{
-    color: var(--accent);
+@mixin icon {
+    margin-bottom: 32px;
+    width: 60px;
+    height: 60px;
+
+    @media(max-width: 640px){
+        margin: 0 auto 12px;                      
+    }
+
+    @media(max-width: 470px){
+        width: 56px;
+        height: 56px;
+        margin-bottom: 12px;                          
+    }
+}
+
+@mixin headline{
     font-family: $font-Gilroy;
-    font-size: 18px;
-    font-weight: 600;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    
+    @media(max-width: 640px){
+        margin: 0 auto 8px;
+        text-align: center;        
+    }
+
+    @media(max-width: 425px){
+        text-align: center;
+        font-size: 20px;
+    }
 }

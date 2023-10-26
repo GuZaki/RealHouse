@@ -118,14 +118,14 @@ section{
     margin: 0 auto;
 }
 
-h1{
+.title{
     font-family: $font-Gilroy;
     font-size: 64px;
     font-weight: 800;
     line-height: 80px;
 }
 
-h2{
+.subtitle{
     font-family: $font-Gilroy;
     font-size: 44px;
     font-weight: 800;
@@ -140,10 +140,22 @@ h2{
     }
 }
 
-h3{
+.text-gold{
     font-family: $font-Gilroy;
-    font-size: 24px;
-    font-weight: 700;
+    font-size: 56px;
+    font-weight: 400;
+
+    @media(max-width: 992px){
+        font-size: 32px;
+    }
+}
+
+.photo-img{
+    display: flex;
+
+    @media(max-width: 925px){
+        align-self: self-start;
+    }
 }
 
 .text{
@@ -174,6 +186,14 @@ h3{
     @include contact-btn;
 }
 
+.icon{
+    @include icon;
+}
+
+.headline{
+    @include headline;
+}
+
 h1, 
 h2, 
 h3, 
@@ -189,3 +209,5 @@ p{
         --container: 290px;
     }
 }
+
+
