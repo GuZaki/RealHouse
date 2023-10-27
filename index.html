@@ -29,16 +29,16 @@
                     <span></span>
                 </div>
                 
-                <nav class="header__navigation">
+                <nav class="header__navigation navigation">
                     <ul>
-                        <li><a href="#">О компании</a></li>
-                        <li><a href="#">Наши направления</a></li>
-                        <li><a href="#">Каталог</a></li>
-                        <li><a href="#">Гарантии</a></li>
-                        <li><a href="#">Этапы работы</a></li>
-                        <li><a href="#">Отзывы</a></li>
-                        <li><a href="#">Оформить ипотеку</a></li>
-                        <li><a href="#">Помощь консультанта</a></li>
+                        <li><a href="#about">О компании</a></li>
+                        <li><a href="#catalog">Каталог</a></li>
+                        <li><a href="#stages">Этапы работы</a></li>
+                        <li><a href="#feedback">Отзывы</a></li>
+                        <li><a href="#features">Направления</a></li>
+                        <li><a href="#guarantee">Гарантии</a></li>
+                        <li><a href="#credit-help">Оформление ипотеки</a></li>
+                        <li><a href="#consult">Контакты</a></li>
                     </ul>
                 </nav>
             </div>
@@ -59,7 +59,7 @@
             </div>
         </section>
 
-        <section class="about">
+        <section class="about" id="about">
             <div class="container about__container">
                 <div class="about__img photo-img">
                     <img src="./img/about/about_img.png" alt="">
@@ -116,7 +116,7 @@
             </div>
         </section>
 
-        <section class="features">
+        <section class="features" id="features">
             <div class="container features__container">
                 <h2 class="features__subtitle subtitle">Три наших основных направления</h2>
 
@@ -155,17 +155,17 @@
             </div>
         </section>
 
-        <section class="catalog">            
+        <section class="catalog" id="catalog">            
             <div class="container">
-                <div class="catalog__top">
+                <div class="catalog__top top">
                     <h2 class="catalog__subtitle subtitle">ТОП-15 квартир из нашего <a class="catalog__link" href="#">каталога</a></h2>
-                    <div class="catalog__arrows">
-                        <div class="catalog__arrow-prew">
+                    <div class="arrows">
+                        <div class="arrow-prew">
                             <svg width="51" height="16" viewBox="0 0 51 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M0.292892 8.70711C-0.0976295 8.31658 -0.0976295 7.68342 0.292892 7.29289L6.65685 0.928932C7.04738 0.538408 7.68054 0.538408 8.07107 0.928932C8.46159 1.31946 8.46159 1.95262 8.07107 2.34315L2.41422 8L8.07107 13.6569C8.46159 14.0474 8.46159 14.6805 8.07107 15.0711C7.68054 15.4616 7.04738 15.4616 6.65685 15.0711L0.292892 8.70711ZM51 9H1V7H51V9Z" fill="#C7954B"/>
                             </svg>
                         </div>
-                        <div class="catalog__arrow-next">
+                        <div class="arrow-next">
                             <svg width="51" height="16" viewBox="0 0 51 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M50.7071 8.70711C51.0976 8.31658 51.0976 7.68342 50.7071 7.29289L44.3431 0.928932C43.9526 0.538408 43.3195 0.538408 42.9289 0.928932C42.5384 1.31946 42.5384 1.95262 42.9289 2.34315L48.5858 8L42.9289 13.6569C42.5384 14.0474 42.5384 14.6805 42.9289 15.0711C43.3195 15.4616 43.9526 15.4616 44.3431 15.0711L50.7071 8.70711ZM0 9H50V7H0L0 9Z" fill="#C7954B"/>
                             </svg>
@@ -239,9 +239,22 @@
                                 </div>
                             </div>
                         </div>
+                        
+                        <div class="catalog__slide swiper-slide">
+                            <div class="catalog__card">
+                                <img class="card__img" src="./img/catalog/catalog_img_02.png" alt="">
+                                <div class="card__info">
+                                        <p class="card__price">8 400 000 ₽</p>
+                                    <div class="card__block">
+                                        <p class="card__name">1-комнатная квартира 36 м<sup>2</sup></p>
+                                        <address class="card__adress">Москва, район Войковский, ул. Макарова, д. 8 ст. метро Тимирязевская</address>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="catalog__bottom">
-                        <div class="catalog__bottom-swiper-pagination swiper-pagination"></div>
+                    <div class="slide-bottom">
+                        <div class="swiper-pagination"></div>
                     </div>
                 </div>                
             </div> 
@@ -267,7 +280,7 @@
             </div>
         </section>
         
-        <section class="guarantee">
+        <section class="guarantee" id="guarantee">
             <div class="container guarantee__container">
                 <div class="guarantee__left">
                     <h2 class="guarantee__subtitle subtitle">Работая с нами,<br> вы получаете гарантии</h2>
@@ -316,7 +329,7 @@
             </div>
         </section>
 
-        <section class="consult">
+        <section class="consult" id="consult">
             <div class="container">
                 <h2 class="consult__subtitle subtitle">Остались вопросы? Мы ответим на них прямо сейчас!</h2>
 
@@ -331,7 +344,7 @@
             </div>
         </section>
 
-        <section class="stages">
+        <section class="stages" id="stages">
             <div class="container stages__container">
                 <div class="stages__img photo-img">
                     <img src="./img/stages/stages_img.png" alt="">
@@ -376,7 +389,7 @@
             </div>
         </section>
 
-        <section class="about">
+        <section class="credit-help" id="credit-help">
             <div class="container credit-help__container">
                 <div class="credit-help__left">
                     
@@ -402,8 +415,168 @@
             </div>
         </section>
 
+        <section class="feedback" id="feedback">            
+            <div class="container feedback__container_top">
+                <div class="feedback__top top">
+                    <h2 class="feedback__subtitle subtitle">Почитайте отзывы наших довольных клиентов</h2>
+                    <div class="arrows">
+                        <div class="arrow-prew">
+                            <svg width="51" height="16" viewBox="0 0 51 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.292892 8.70711C-0.0976295 8.31658 -0.0976295 7.68342 0.292892 7.29289L6.65685 0.928932C7.04738 0.538408 7.68054 0.538408 8.07107 0.928932C8.46159 1.31946 8.46159 1.95262 8.07107 2.34315L2.41422 8L8.07107 13.6569C8.46159 14.0474 8.46159 14.6805 8.07107 15.0711C7.68054 15.4616 7.04738 15.4616 6.65685 15.0711L0.292892 8.70711ZM51 9H1V7H51V9Z" fill="#C7954B"/>
+                            </svg>
+                        </div>
+                        <div class="arrow-next">
+                            <svg width="51" height="16" viewBox="0 0 51 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M50.7071 8.70711C51.0976 8.31658 51.0976 7.68342 50.7071 7.29289L44.3431 0.928932C43.9526 0.538408 43.3195 0.538408 42.9289 0.928932C42.5384 1.31946 42.5384 1.95262 42.9289 2.34315L48.5858 8L42.9289 13.6569C42.5384 14.0474 42.5384 14.6805 42.9289 15.0711C43.3195 15.4616 43.9526 15.4616 44.3431 15.0711L50.7071 8.70711ZM0 9H50V7H0L0 9Z" fill="#C7954B"/>
+                            </svg>
+                        </div>
+                    </div> 
+                </div>
+            
+            </div>    
+            
+            <div class="container feedback__container_bottom">
+                <div class="feedback__swiper swiper">
+                    <div class="feedback__swiper-wrapper swiper-wrapper">
+                        <div class="feedback__slide swiper-slide">
+                            <div class="feedback__card">
+                                <p class="feedback__text">
+                                    Появилась необходимость в продаже квартиры. Так как времени на показ квартиры не было пришлось искать компанию, 
+                                    которая могла бы помочь с этим. Благодаря работе данной компании мне не пришлось тратить время на постоянные показы квартиры. 
+                                </p>
+                                <div class="feedback__info">
+                                    <img class="feedback__img" src="./img/feedback/userpic_1.png" alt="">
+                                    <div class="feedback__block">
+                                        <p class="feedback__name">Владислав Руденко</p>
+                                        <address class="feedback__city">Москва</address>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="feedback__slide swiper-slide">
+                            <div class="feedback__card">
+                                <p class="feedback__text">
+                                    Работники компании понимают с полуслова и сразу нашли подходящий для нас вариант. Из приятных бонусов то, что всю бумажную волокиту компания
+                                    берет на себя. Нам оставалось только заехать в квартиру. 
+                                </p>
+                                <div class="feedback__info">
+                                    <img class="feedback__img" src="./img/feedback/userpic_2.png" alt="">
+                                    <div class="feedback__block">
+                                        <p class="feedback__name">Ольга Стрелина</p>
+                                        <address class="feedback__city">Санкт-Петербург</address>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="feedback__slide swiper-slide">
+                            <div class="feedback__card">
+                                <p class="feedback__text">
+                                    Огромное спасибо компании за помощь в поиске квартиры. Менеджеры в компании очень терпеливые и вежливые. Предложил более 30 вариантов квартир 
+                                    с учётом моих требований. Работой компании остался очень доволен! 
+                                </p>
+                                <div class="feedback__info">
+                                    <img class="feedback__img" src="./img/feedback/userpic_3.png" alt="">
+                                    <div class="feedback__block">
+                                        <p class="feedback__name">Арсен Фариев</p>
+                                        <address class="feedback__city">Москва</address>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="feedback__slide swiper-slide">
+                            <div class="feedback__card">
+                                <p class="feedback__text">
+                                    Появилась необходимость в продаже квартиры. Так как времени на показ квартиры не было пришлось искать компанию, 
+                                    которая могла бы помочь с этим. Благодаря работе данной компании мне не пришлось тратить время на постоянные показы квартиры. 
+                                </p>
+                                <div class="feedback__info">
+                                    <img class="feedback__img" src="./img/feedback/userpic_1.png" alt="">
+                                    <div class="feedback__block">
+                                        <p class="feedback__name">Владислав Руденко</p>
+                                        <address class="feedback__city">Москва</address>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="feedback__slide swiper-slide">
+                            <div class="feedback__card">
+                                <p class="feedback__text">
+                                    Работники компании понимают с полуслова и сразу нашли подходящий для нас вариант. Из приятных бонусов то, что всю бумажную волокиту компания
+                                    берет на себя. Нам оставалось только заехать в квартиру. 
+                                </p>
+                                <div class="feedback__info">
+                                    <img class="feedback__img" src="./img/feedback/userpic_2.png" alt="">
+                                    <div class="feedback__block">
+                                        <p class="feedback__name">Ольга Стрелина</p>
+                                        <address class="feedback__city">Санкт-Петербург</address>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="feedback__slide swiper-slide">
+                            <div class="feedback__card">
+                                <p class="feedback__text">
+                                    Огромное спасибо компании за помощь в поиске квартиры. Менеджеры в компании очень терпеливые и вежливые. Предложил более 30 вариантов квартир 
+                                    с учётом моих требований. Работой компании остался очень доволен! 
+                                </p>
+                                <div class="feedback__info">
+                                    <img class="feedback__img" src="./img/feedback/userpic_3.png" alt="">
+                                    <div class="feedback__block">
+                                        <p class="feedback__name">Арсен Фариев</p>
+                                        <address class="feedback__city">Москва</address>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="slide-bottom">
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="location">
+            <div class="container">
+                <div class="location__info">
+                    <div class="location__info_wrap">
+                        <div class="location__adress">
+                            <img src="./img/location/pin-icon.svg" alt="">
+                            <div class="attribute"></div>
+                            <div class="attribute-value"></div>
+                        </div>
+                        <div class="location__tel">
+                            <img src="./img/location/phone-icon.svg" alt="">
+                            <div class="attribute"></div>
+                            <div class="attribute-value"></div>
+                        </div>
+                        <div class="location__mode">
+                            <img src="./img/location/clock-icon.svg" alt="">
+                            <div class="attribute"></div>
+                            <div class="attribute-value"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <svg xmlns="http://www.w3.org/2000/svg" width="240" height="240" viewBox="0 0 240 240" fill="none">
+                    <circle opacity="0.16" cx="120" cy="120" r="120" fill="#C7954B"/>
+                    <circle opacity="0.53" cx="120.498" cy="120.498" r="65.7261" fill="#C7954B"/>
+                    <ellipse cx="120.498" cy="120.498" rx="17.9253" ry="17.9253" fill="#C7954B"/>
+                </svg>
+            </div>
+        </section>
+
     </main>
-    <footer></footer>
+
+    <footer>
+
+    </footer>
 
 
     <div class="modal__info modal">
@@ -415,7 +588,7 @@
                     </svg>
                 </div>
                 <div class="modal__content">
-                    <h2 class="modal__subtitle">Оставьте заявку</h2>
+                    <h2 class="modal__subtitle subtitle">Оставьте заявку</h2>
                     <p class="modal__text text">на бесплатный подбор квартиры<br> и <span>получите скидку 15%</span> на её покупку.</p>        
                     <form class="form consult__form modal__form" action="">
                         <input class="input" type="text" placeholder="Ваше имя">
@@ -434,5 +607,4 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 </body>
 </html>
-
 

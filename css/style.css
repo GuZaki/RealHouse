@@ -162,6 +162,52 @@ section {
   }
 }
 
+.slide-bottom {
+  position: relative;
+  height: 18px;
+  margin: 0 auto;
+}
+.slide-bottom-swiper-pagination {
+  bottom: 0 !important;
+}
+
+.swiper-pagination-bullet {
+  border: 1px solid var(--accent);
+  background-color: transparent;
+  margin: 0 7px !important;
+  height: 12px;
+  width: 12px;
+}
+@media (max-width: 425px) {
+  .swiper-pagination-bullet {
+    height: 10px;
+    width: 10px;
+    margin: 0 4px !important;
+  }
+}
+.swiper-pagination-bullet:focus {
+  background: var(--accent);
+  height: 15px;
+  width: 15px;
+}
+@media (max-width: 425px) {
+  .swiper-pagination-bullet:focus {
+    height: 12px;
+    width: 12px;
+  }
+}
+
+.arrows {
+  display: flex;
+  gap: 25px;
+  cursor: pointer;
+}
+@media (max-width: 800px) {
+  .arrows {
+    display: none;
+  }
+}
+
 .text {
   font-family: "IBM Plex Sans", sans-serif;
   font-size: 16px;
@@ -814,16 +860,6 @@ button:active {
   color: var(--accent);
   text-decoration: underline;
 }
-.catalog__arrows {
-  display: flex;
-  gap: 25px;
-  cursor: pointer;
-}
-@media (max-width: 800px) {
-  .catalog__arrows {
-    display: none;
-  }
-}
 .catalog__swiper {
   position: relative;
 }
@@ -865,40 +901,6 @@ button:active {
   left: 0;
   background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.5) 50%);
   z-index: -1;
-}
-.catalog__bottom {
-  position: relative;
-  height: 18px;
-  margin: 0 auto;
-}
-.catalog__bottom-swiper-pagination {
-  bottom: 0 !important;
-}
-
-.swiper-pagination-bullet {
-  border: 1px solid var(--accent);
-  background-color: transparent;
-  margin: 0 7px !important;
-  height: 12px;
-  width: 12px;
-}
-@media (max-width: 425px) {
-  .swiper-pagination-bullet {
-    height: 10px;
-    width: 10px;
-    margin: 0 4px !important;
-  }
-}
-.swiper-pagination-bullet:focus {
-  background: var(--accent);
-  height: 15px;
-  width: 15px;
-}
-@media (max-width: 425px) {
-  .swiper-pagination-bullet:focus {
-    height: 12px;
-    width: 12px;
-  }
 }
 
 .card__info {
@@ -1289,4 +1291,65 @@ button:active {
   .credit-help__text {
     text-align: start;
   }
-}/*# sourceMappingURL=style.css.map */
+}
+/*feedback section*/
+.feedback__container_top {
+  margin-bottom: 44px;
+}
+.feedback__container_bottom {
+  max-width: 1666px;
+  padding: 0 var(--padding-container);
+}
+.feedback__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.feedback__subtitle {
+  max-width: 547px;
+}
+.feedback__swiper-wrapper {
+  margin-bottom: 45px;
+  height: 335px;
+}
+.feedback__slide {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  height: 100%;
+}
+.feedback__card {
+  font-family: "IBM Plex Sans", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  padding: 0 56px;
+  background-color: var(--bg-accent);
+}
+.feedback__text {
+  max-width: 430px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  margin-bottom: 50px;
+}
+.feedback__info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.feedback__img {
+  width: 55px;
+  height: 55px;
+}
+.feedback__name {
+  font-family: "Gilroy", sans-serif;
+  margin-bottom: 4px;
+}
+.feedback__city {
+  color: rgba(255, 255, 255, 0.5);
+  font-style: normal;
+}
+
+/*location section*//*# sourceMappingURL=style.css.map */
