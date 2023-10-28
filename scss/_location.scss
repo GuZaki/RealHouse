@@ -1,1 +1,72 @@
 /*location section*/
+.location {
+
+    &__container {
+        background-image: url('/img/location/map.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position:  bottom;
+        
+        height: 884px;
+        position: relative;
+
+        @media(max-width: 1024px){
+            background-size: cover;
+
+
+        }
+    }
+
+    &__wrap {
+        position: absolute;
+        top: 248px;
+        left: 78px;
+        background-color: var(--bg-accent);
+        display: flex;
+        flex-direction: column;
+        width: 392px;
+        padding: 60px;
+        gap: 24px;
+        font-family: $font-IBM;
+        font-weight: 400;
+
+        @media(max-width: 1240px){
+            top: -100px;
+            left: 40px;
+
+        }
+    }
+
+    &__adress {
+        @include location;
+    }
+
+    &-img {
+        width: 20px;
+        height: 20px;
+    }
+
+    &__tel {
+        @include location;
+    }
+
+    &__mode {
+        @include location;
+    }
+
+    &-info{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.attribute {
+    color: rgba(#fff, 0.50);
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.attribute-value {
+    font-size: 20px;
+}
+

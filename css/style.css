@@ -1352,4 +1352,72 @@ button:active {
   font-style: normal;
 }
 
-/*location section*//*# sourceMappingURL=style.css.map */
+/*location section*/
+.location__container {
+  background-image: url("/img/location/map.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  height: 884px;
+  position: relative;
+}
+@media (max-width: 1024px) {
+  .location__container {
+    background-size: cover;
+  }
+}
+.location__wrap {
+  position: absolute;
+  top: 248px;
+  left: 78px;
+  background-color: var(--bg-accent);
+  display: flex;
+  flex-direction: column;
+  width: 392px;
+  padding: 60px;
+  gap: 24px;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 400;
+}
+@media (max-width: 1240px) {
+  .location__wrap {
+    top: -100px;
+    left: 40px;
+  }
+}
+.location__adress {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+}
+.location-img {
+  width: 20px;
+  height: 20px;
+}
+.location__tel {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+}
+.location__mode {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+}
+.location-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.attribute {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.attribute-value {
+  font-size: 20px;
+}/*# sourceMappingURL=style.css.map */
