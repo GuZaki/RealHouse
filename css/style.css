@@ -1354,7 +1354,7 @@ button:active {
 
 /*location section*/
 .location__container {
-  background-image: url("./img/location/map.png");
+  background-image: url("../img/location/map.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: bottom;
