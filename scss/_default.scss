@@ -138,6 +138,18 @@ section{
     }
 }
 
+.contact-wrap{
+    @include contact-wrap;
+}
+
+.logo{
+    max-width: 210px;
+
+        @media(max-width: 320px){
+            width: 135px;
+        }
+}
+
 .text-gold{
     font-family: $font-Gilroy;
     font-size: 56px;

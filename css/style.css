@@ -142,6 +142,32 @@ section {
   }
 }
 
+.contact-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+.contact-wrap a {
+  font-family: "Gilroy", sans-serif;
+  color: var(--text-color);
+  font-size: 27px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  letter-spacing: 0.7px;
+}
+.contact-wrap .grey {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.logo {
+  max-width: 210px;
+}
+@media (max-width: 320px) {
+  .logo {
+    width: 135px;
+  }
+}
+
 .text-gold {
   font-family: "Gilroy", sans-serif;
   font-size: 56px;
@@ -341,6 +367,7 @@ section {
   color: var(--accent);
   font-family: "Gilroy", sans-serif;
   font-weight: 600;
+  font-size: 16px;
 }
 
 .icon {
@@ -455,36 +482,10 @@ button:active {
   color: var(--text-color);
   height: 59px;
 }
-.header__logo {
-  max-width: 210px;
-}
-@media (max-width: 320px) {
-  .header__logo {
-    width: 135px;
-  }
-}
 .header__right {
   display: flex;
   justify-content: space-between;
   gap: 60px;
-}
-.header__contact {
-  display: flex;
-  flex-direction: column;
-  align-items: end;
-}
-.header__contact a {
-  color: var(--text-color);
-  font-size: 27px;
-  font-weight: 700;
-  margin-bottom: 6px;
-  letter-spacing: 0.7px;
-}
-.header__contact .grey {
-  color: rgba(255, 255, 255, 0.5);
-}
-.header__contact-btn {
-  font-size: 16px;
 }
 @media (max-width: 768px) {
   .header__contact {
@@ -540,11 +541,11 @@ button:active {
 }
 .header__navigation {
   position: fixed;
-  display: flex;
   width: 100%;
   height: 100vh;
   top: 0;
   right: -100%;
+  display: flex;
   background-color: var(--bg-accent);
   overflow: auto;
   transition: all 0.8s;
@@ -1322,7 +1323,7 @@ button:active {
   font-family: "IBM Plex Sans", sans-serif;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: start;
   padding: 0 56px;
   background-color: var(--bg-accent);
@@ -1332,7 +1333,6 @@ button:active {
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
-  margin-bottom: 50px;
 }
 .feedback__info {
   display: flex;
@@ -1420,4 +1420,45 @@ button:active {
 
 .attribute-value {
   font-size: 20px;
+}
+
+/*footer*/
+.footer {
+  padding: 64px 0 56px;
+}
+.footer__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 48px;
+}
+.footer__navigation {
+  font-size: 16px;
+  font-weight: 400;
+}
+.footer__navigation ul {
+  font-family: "IBM Plex Sans", sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 16px;
+}
+.footer__navigation ul li {
+  flex-basis: 20%;
+}
+.footer__bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer__bottom-left {
+  display: flex;
+  justify-content: space-between;
+  width: 208px;
+}
+.footer__bottom-center {
+  display: flex;
+  justify-content: space-between;
+  gap: 53px;
+  line-height: 18px;
 }/*# sourceMappingURL=style.css.map */
