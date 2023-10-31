@@ -130,3 +130,9 @@
         }
     }
 }
+
+.logo{
+    @media(max-width: 320px){
+        width: 135px;
+    }
+}

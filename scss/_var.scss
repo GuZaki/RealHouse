@@ -149,8 +149,12 @@ $font-IBM: 'IBM Plex Sans', sans-serif;
     line-height: 18px; 
     color: rgba(#fff, 0.50);
 
-    @media(max-width: 425px){
+    @media(max-width: 720px){
         text-align: center;
+    }
+
+    @media(max-width: 425px){
+        font-size: 10px;
     }
 }
 

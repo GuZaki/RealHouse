@@ -74,24 +74,24 @@ var swiper = new Swiper(".feedback__swiper", {
         prevEl: ".top  .arrow-prew",
     },
 
-    // breakpoints: {
-    //     300: {
-    //         slidesPerView: 1,
-    //         spaceBetween: 5,
-    //     },
-    //     800: {
-    //         slidesPerView: 2,
-    //         spaceBetween: 10,
-    //     },
-    //     1200: {
-    //         slidesPerView: 3,
-    //         spaceBetween: 10,
-    //     },
-    //     1440: {
-    //         slidesPerView: 3,
-    //         spaceBetween: 20,
-    //     },
-    // },
+    breakpoints: {
+        300: {
+            slidesPerView: 2,
+            spaceBetween: 5,
+        },
+        1000: {
+            slidesPerView: 2.4,
+            spaceBetween: 10,
+        },
+        1200: {
+            slidesPerView: 3,
+            spaceBetween: 10,
+        },
+        1440: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+        },
+    },
     
 });
 
@@ -109,3 +109,39 @@ modalBtn.addEventListener('click', () =>{
 modalBtnClose.addEventListener('click', () =>{
     modal.classList.remove('modal_active')
 })
+
+
+    // Функция ymaps API
+    ymaps.ready(init);
+    function init(){
+        // Создание карты.
+        var myMap = new ymaps.Map("map", {
+            // Координаты центра карты.
+            center: [55.768061, 37.591854],
+            // Уровень масштабирования. Допустимые значения: от 0 (весь мир) до 19.
+            zoom: 15
+        }, 
+         
+        {
+            searchControlProvider: 'yandex#search'
+        }),
+        
+
+        myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+            hintContent: 'RealHouse',
+            balloonContent: 'RealHouse'
+        }, {
+            // Опции.
+            // Необходимо указать данный тип макета.
+            iconLayout: 'default#image',
+            // Своё изображение иконки метки.
+            iconImageHref: '../img/location/pin.png',
+            // Размеры метки.
+            iconImageSize: [240, 240],
+            // Смещение левого верхнего угла иконки относительно (точки привязки).
+            iconImageOffset: [-140, -140]
+        });
+
+    myMap.geoObjects
+        .add(myPlacemark)
+    }

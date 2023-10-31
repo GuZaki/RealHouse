@@ -1,17 +1,13 @@
 /*location section*/
 .location {
 
-    &__container {
-        background-image: url('../img/location/map.png');
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position:  bottom;
-        
+    &__container {       
         height: 884px;
         position: relative;
 
         @media(max-width: 1024px){
             background-size: cover;
+            padding: 0;
         }
     }
 
@@ -27,6 +23,7 @@
         gap: 24px;
         font-family: $font-IBM;
         font-weight: 400;
+        z-index: 10;
 
         @media(max-width: 1240px){
             top: -100px;
