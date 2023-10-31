@@ -70,12 +70,16 @@ var swiper = new Swiper(".feedback__swiper", {
         clickable: true,
     },
     navigation: {
-        nextEl: ".top  .arrow-next",
-        prevEl: ".top  .arrow-prew",
+        nextEl: ".feedback .arrow-next",
+        prevEl: ".feedback .arrow-prew",
     },
 
     breakpoints: {
         300: {
+            slidesPerView: 1,
+            spaceBetween: 5,
+        },
+        660: {
             slidesPerView: 2,
             spaceBetween: 5,
         },
