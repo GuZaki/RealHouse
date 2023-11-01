@@ -440,6 +440,15 @@ p span {
 #map {
   width: 100%;
   height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media (max-width: 425px) {
+  #map {
+    height: 498px;
+    position: absolute;
+    bottom: 0;
+  }
 }
 
 /*UI kit*/
@@ -1548,10 +1557,15 @@ button:active {
   height: 884px;
   position: relative;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1320px) {
   .location__container {
-    background-size: cover;
+    height: 680px;
     padding: 0;
+  }
+}
+@media (max-width: 900px) {
+  .location__container {
+    height: 638px;
   }
 }
 .location__wrap {
@@ -1570,8 +1584,31 @@ button:active {
 }
 @media (max-width: 1240px) {
   .location__wrap {
-    top: -100px;
-    left: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 15px;
+  }
+}
+@media (max-width: 900px) {
+  .location__wrap {
+    width: 290px;
+    padding: 44px;
+    gap: 10px;
+  }
+}
+@media (max-width: 768px) {
+  .location__wrap {
+    top: 20%;
+  }
+}
+@media (max-width: 425px) {
+  .location__wrap {
+    position: relative;
+    top: 0;
+    transform: translateY(0);
+    left: 0;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 .location__adress {
@@ -1606,9 +1643,21 @@ button:active {
   font-size: 16px;
   line-height: 24px;
 }
+@media (max-width: 900px) {
+  .attribute {
+    font-size: 12px;
+    line-height: normal;
+  }
+}
 
 .attribute-value {
   font-size: 20px;
+}
+@media (max-width: 900px) {
+  .attribute-value {
+    font-size: 16px;
+    line-height: 20px;
+  }
 }
 
 /*footer*/

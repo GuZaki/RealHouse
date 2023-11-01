@@ -142,9 +142,8 @@ modalBtnClose.addEventListener('click', () =>{
             searchControlProvider: 'yandex#search'
         }),
         
-
         myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-            hintContent: 'RealHouse',
+            hintContent: 'RealHouse здесь',
             balloonContent: 'RealHouse'
         }, {
             // Опции.
@@ -153,11 +152,23 @@ modalBtnClose.addEventListener('click', () =>{
             // Своё изображение иконки метки.
             iconImageHref: '../img/location/pin.png',
             // Размеры метки.
-            iconImageSize: [240, 240],
+            iconImageSize: [200, 200],
             // Смещение левого верхнего угла иконки относительно (точки привязки).
-            iconImageOffset: [-140, -140]
+            iconImageOffset: [-100, -100]
         });
 
-    myMap.geoObjects
+        myMap.behaviors
+        // Отключаем часть включенных по умолчанию поведений:
+        //  - drag - перемещение карты при нажатой левой кнопки мыши;
+        //  - magnifier.rightButton - увеличение области, выделенной правой кнопкой мыши.
+        .disable(['drag', 'rightMouseButtonMagnifier'])
+
+        // Изменяем свойство поведения с помощью опции:
+        // изменение масштаба колесом прокрутки будет происходить медленно,
+        // на 1/2 уровня масштабирования в секунду.
+        myMap.options.set('scrollZoomSpeed', 0.5);
+
+        myMap.geoObjects
+
         .add(myPlacemark)
     }

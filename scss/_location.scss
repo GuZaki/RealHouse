@@ -5,9 +5,14 @@
         height: 884px;
         position: relative;
 
-        @media(max-width: 1024px){
-            background-size: cover;
+
+        @media(max-width: 1320px){
+            height: 680px;
             padding: 0;
+        }
+
+        @media(max-width: 900px){
+            height: 638px;
         }
     }
 
@@ -26,8 +31,28 @@
         z-index: 10;
 
         @media(max-width: 1240px){
-            top: -100px;
-            left: 40px;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 15px;
+        }
+        
+        @media(max-width: 900px){
+            width: 290px;
+            padding: 44px;
+            gap: 10px;
+        }
+
+        @media(max-width: 768px){
+            top: 20%;
+        }
+
+        @media(max-width: 425px){
+            position: relative;
+            top: 0;
+            transform: translateY(0);
+            left: 0;
+            margin-left: auto;
+            margin-right: auto;
         }
     }
 
@@ -58,9 +83,19 @@
     color: rgba(#fff, 0.50);
     font-size: 16px;
     line-height: 24px;
+
+    @media(max-width: 900px){
+        font-size: 12px;
+        line-height: normal;
+    }
 }
 
 .attribute-value {
     font-size: 20px;
+
+    @media(max-width: 900px){
+        font-size: 16px;
+        line-height: 20px;
+    }
 }
 
