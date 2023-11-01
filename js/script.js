@@ -78,8 +78,8 @@ var swiper = new Swiper(".feedback__swiper", {
         clickable: true,
     },
     navigation: {
-        nextEl: ".feedback .arrow-next",
-        prevEl: ".feedback .arrow-prew",
+        nextEl: ".feedback__top .arrow-next",
+        prevEl: ".feedback__top .arrow-prew",
     },
 
     breakpoints: {
