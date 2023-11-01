@@ -150,7 +150,7 @@ modalBtnClose.addEventListener('click', () =>{
             // Необходимо указать данный тип макета.
             iconLayout: 'default#image',
             // Своё изображение иконки метки.
-            iconImageHref: '../img/location/pin.png',
+            iconImageHref: './img/location/pin.png',
             // Размеры метки.
             iconImageSize: [200, 200],
             // Смещение левого верхнего угла иконки относительно (точки привязки).
