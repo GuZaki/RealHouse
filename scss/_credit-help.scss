@@ -3,21 +3,28 @@
 .credit-help {
 
 	&__container {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px;
-
-        @media(max-width: 925px){
-            flex-direction: column;
-        }
+        position: relative;
 	}
 
-	&__left {
-        max-width: 652px;
+	&__wrap {
+        max-width: calc(50% - 25px);
         padding-top: 135px;
+        padding-bottom: 186px;
 
-        @media(max-width: 925px){
+        @media(max-width: 1200px){
+            padding-top: 100px;
+            padding-bottom: 110px;
+        }
+
+        @media(max-width: 920px){
+            padding-top: 50px;
+            padding-bottom: 60px;
+        }
+
+        @media(max-width: 768px){
+            max-width: 100%;
             padding-top: 0;
+            padding-bottom: 0;
         }
 	}
 
@@ -47,7 +54,31 @@
         }
 	}
 
-	&__btn {
+	&__photo-img {
+        position: absolute;
+        top: 0;
+        right: 15px;
+        max-width: calc(50% - 25px);
+        height: 100%;
+
+        @media(max-width: 768px){
+            position: relative;
+            right: 0;
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 12px;
+        }
+
+        & img{
+            object-fit: cover;
+        }
 	}
+
+    &__btn{
+        @media(max-width: 425px){
+            display: block;
+            margin: 0 auto;        
+        }
+    }
 }
 

@@ -152,6 +152,10 @@ section{
     font-weight: 400;
 
     @media(max-width: 992px){
+        font-size: 36px;
+    }
+
+    @media(max-width: 425px){
         font-size: 32px;
     }
 }
@@ -159,8 +163,8 @@ section{
 .photo-img{
     display: flex;
 
-    @media(max-width: 925px){
-        align-self: self-start;
+    @media(max-width: 1354px){
+        align-self: center;
     }
 }
 
@@ -223,6 +227,10 @@ section{
 
 .form{
     @include form;
+}
+
+.inputs{
+    @include inputs;
 }
 
 .input{

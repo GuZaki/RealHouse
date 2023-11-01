@@ -28,6 +28,10 @@
         @media(max-width: 1068px){
             padding-top: 0;
         }
+
+        @media(max-width: 875px){
+            max-width: 98%;
+        }
     }
 
     &__description{
@@ -74,6 +78,11 @@
             row-gap: 19px;
         }
 
+        @media(max-width: 875px){
+            margin: 0 auto;
+            justify-content: space-around;
+        }
+
         &-text{
             display: flex;
             flex-direction: column;
@@ -96,7 +105,8 @@
                     font-size: 16px;
                 }
 
-                @media(max-width: 425px){
+                
+                @media(max-width: 600px){
                     width: 135px;
                     text-align: center;
                 }
@@ -110,7 +120,7 @@
                             font-size: 20px;
                         }
 
-                        @media(max-width: 425px){
+                        @media(max-width: 600px){
                             font-size: 14px;   
                         }
                     }
@@ -119,10 +129,6 @@
 
             & .text{
                 max-width: 208px;
-
-                @media(max-width: 425px){
-                    text-align: center;
-                }
             }
         } 
     }

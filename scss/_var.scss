@@ -97,13 +97,22 @@ $font-IBM: 'IBM Plex Sans', sans-serif;
     @media(max-width: 1024px){
         flex-direction: column;
         flex-wrap: nowrap;
-        gap: 14px;
+        gap: 12px;
         justify-content: space-between;
-        align-items: start;
     }
 
     @media(max-width: 425px){
         align-items: center;
+    }
+}
+@mixin inputs{
+    display: flex;
+    gap: 20px;
+
+    @media(max-width: 720px){
+        flex-direction: column;
+        gap: 14px;
+        margin-bottom: 2px;
     }
 }
 
@@ -155,6 +164,7 @@ $font-IBM: 'IBM Plex Sans', sans-serif;
 
     @media(max-width: 425px){
         font-size: 10px;
+        line-height: 14px;
     }
 }
 

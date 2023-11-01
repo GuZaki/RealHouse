@@ -43,8 +43,16 @@ var swiper = new Swiper(".catalog__swiper", {
             slidesPerView: 1,
             spaceBetween: 5,
         },
-        800: {
+        790: {
             slidesPerView: 2,
+            spaceBetween: 10,
+        },
+        940: {
+            slidesPerView: 2.4,
+            spaceBetween: 10,
+        },
+        1040: {
+            slidesPerView: 2.6,
             spaceBetween: 10,
         },
         1200: {
@@ -79,9 +87,13 @@ var swiper = new Swiper(".feedback__swiper", {
             slidesPerView: 1,
             spaceBetween: 5,
         },
-        660: {
-            slidesPerView: 2,
+        480: {
+            slidesPerView: 1.5,
             spaceBetween: 5,
+        },
+        800: {
+            slidesPerView: 2,
+            spaceBetween: 10,
         },
         1000: {
             slidesPerView: 2.4,
@@ -125,7 +137,7 @@ modalBtnClose.addEventListener('click', () =>{
             // Уровень масштабирования. Допустимые значения: от 0 (весь мир) до 19.
             zoom: 15
         }, 
-         
+        
         {
             searchControlProvider: 'yandex#search'
         }),
