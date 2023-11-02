@@ -54,7 +54,6 @@
         font-family: $font-Gilroy;
         position: relative;
         z-index: 10;
-    
         
         &:after {
             content: '';
@@ -65,6 +64,10 @@
             left: 0;
             background: linear-gradient(to bottom, transparent 0%,  rgba(0,0,0,0.5) 50%);
             z-index: -1;
+
+            // &:hover{
+            //     background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.62) 0%);
+            // }
         }
     }
 }
@@ -137,4 +140,20 @@
             line-height: 16px;                  
         }
     }
+
+    &__btn{
+        margin-top: 20px;
+        display: none;
+
+        &-active{
+            display: block;
+            pointer-events: all;
+        }
+
+        @media(max-width: 425px){
+            max-width: 98%;    
+        }
+        
+    }
 }
+

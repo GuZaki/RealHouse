@@ -31,6 +31,7 @@ body {
     position: relative;
 
     &.lock{
+        height: 100vh;
         overflow: hidden;
     }
 }

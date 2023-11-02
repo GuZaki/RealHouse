@@ -36,6 +36,7 @@ body {
   position: relative;
 }
 body.lock {
+  height: 100vh;
   overflow: hidden;
 }
 
@@ -1024,79 +1025,18 @@ button:active {
     line-height: 16px;
   }
 }
-
-/*modals*/
-.modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  z-index: 10;
-  visibility: hidden;
-  opacity: 0;
-  transition: all 0.2s;
-  pointer-events: none;
+.card__btn {
+  margin-top: 20px;
+  display: none;
 }
-.modal_active {
-  visibility: visible;
-  opacity: 1;
+.card__btn-active {
+  display: block;
   pointer-events: all;
 }
-.modal__wrap {
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
-  padding: 120px 20px 20px;
-}
-.modal__body {
-  position: relative;
-  padding: 20px;
-  max-width: 727px;
-  height: 866px;
-  margin: auto;
-  background-color: var(--bg-color);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.modal__content {
-  width: 460px;
-  height: 642px;
-  overflow: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.modal__subtitle {
-  margin-bottom: 14px;
-}
-.modal__text {
-  margin-bottom: 64px;
-  text-align: center;
-  font-size: 24px;
-  line-height: 32px;
-}
-.modal__form {
-  justify-content: center;
-  max-width: 350px;
-}
-.modal__form input {
-  width: 100%;
-  margin-bottom: 12px;
-}
-.modal__form button {
-  width: 100%;
-}
-.modal__form p {
-  width: 100%;
-  text-align: center;
-}
-.modal__close-btn {
-  position: absolute;
-  right: -100px;
-  top: -100px;
-  cursor: pointer;
+@media (max-width: 425px) {
+  .card__btn {
+    max-width: 98%;
+  }
 }
 
 /*partners section*/
@@ -1459,6 +1399,7 @@ button:active {
     bottom: -567%;
     right: 0;
     display: flex;
+    z-index: 10;
   }
 }
 @media (max-width: 425px) {
@@ -1570,7 +1511,8 @@ button:active {
 }
 .location__wrap {
   position: absolute;
-  top: 248px;
+  top: 50%;
+  transform: translateY(-50%);
   left: 78px;
   background-color: var(--bg-accent);
   display: flex;
@@ -1584,8 +1526,6 @@ button:active {
 }
 @media (max-width: 1240px) {
   .location__wrap {
-    top: 50%;
-    transform: translateY(-50%);
     left: 15px;
   }
 }
@@ -1642,6 +1582,7 @@ button:active {
   color: rgba(255, 255, 255, 0.5);
   font-size: 16px;
   line-height: 24px;
+  font-style: normal;
 }
 @media (max-width: 900px) {
   .attribute {
@@ -1777,4 +1718,190 @@ button:active {
   .logo {
     margin-bottom: 16px;
   }
+}
+
+/*modals*/
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 10;
+  display: none;
+  transition: all 0.2s;
+  pointer-events: none;
+}
+.modal_active {
+  display: block;
+  pointer-events: all;
+}
+.modal__wrap {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 120px 10px 20px;
+}
+.modal__body {
+  position: relative;
+  padding: 5% 5px;
+  max-width: 727px;
+  margin: auto;
+  background-color: var(--bg-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal__content {
+  max-width: 460px;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.modal__subtitle {
+  margin-bottom: 14px;
+}
+.modal__text {
+  margin-bottom: 64px;
+  text-align: center;
+  font-size: 24px;
+  line-height: 32px;
+}
+@media (max-width: 425px) {
+  .modal__text {
+    margin-bottom: 35px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+.modal__form {
+  justify-content: center;
+  max-width: 350px;
+}
+.modal__form input {
+  width: 100%;
+  margin-bottom: 12px;
+}
+.modal__form button {
+  width: 100%;
+}
+.modal__form p {
+  width: 100%;
+  text-align: center;
+}
+.modal__close-btn {
+  position: absolute;
+  right: -100px;
+  top: -100px;
+  cursor: pointer;
+}
+@media (max-width: 1024px) {
+  .modal__close-btn {
+    right: 0;
+  }
+}
+@media (max-width: 425px) {
+  .modal__close-btn {
+    width: 50px;
+    height: 50px;
+    top: -60px;
+  }
+}
+
+.modal-card {
+  display: none;
+}
+.modal__card {
+  display: flex;
+}
+.modal__card-active {
+  display: block;
+  pointer-events: all;
+}
+.modal__card-body {
+  position: relative;
+  padding: 5px;
+  max-width: 866px;
+  margin: auto;
+  background-color: var(--bg-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal__card-info {
+  max-width: 50%;
+  font-family: "Gilroy", sans-serif;
+  padding: 40px;
+}
+.modal__card-block {
+  margin-bottom: 52px;
+}
+.modal__card-price {
+  margin-bottom: 14px;
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 1.92px;
+  text-transform: uppercase;
+}
+.modal__card-name {
+  margin-bottom: 4px;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+.modal__card-adress {
+  color: rgba(255, 255, 255, 0.5);
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.16px;
+}
+.modal__card-form {
+  justify-content: flex-start;
+  gap: 20px;
+}
+.modal__card-arrows {
+  position: absolute;
+  display: flex;
+  bottom: 5px;
+  left: 50%;
+  background-color: var(--bg-color);
+  width: 210px;
+  height: 100px;
+}
+.modal__card-arrow-prew {
+  padding: 50px 35px;
+}
+.modal__card-arrow-next {
+  padding: 50px 35px;
+}
+
+.description {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  max-width: 331px;
+  margin-bottom: 74px;
+}
+.description-icon {
+  width: 36px;
+  height: 36px;
+  margin-bottom: 0;
+}
+.description-text {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  max-width: 70%;
+}
+
+.description-item {
+  display: flex;
+  align-items: center;
+  width: 45%;
+  gap: 20px;
 }/*# sourceMappingURL=style.css.map */

@@ -1,6 +1,7 @@
 'use strict';
 
-/*Burger-menu*/
+// Burger-menu
+
 const menu = document.querySelector('.header__navigation');
 const menuBtn = document.querySelector('.header__menu-icon');
 
@@ -11,18 +12,19 @@ if(menu && menuBtn) {
         menu.classList.toggle('active');
         menuBtn.classList.toggle('active');
         body.classList.toggle('lock');
-    })
+    });
 
     menu.querySelectorAll('a').forEach(link => {
         link.addEventListener('click', () => {
-        menu.classList.remove('active');
-        menuBtn.classList.remove('active');
-        body.classList.remove('lock');
-        })
-    })
-}
+            menu.classList.remove('active');
+            menuBtn.classList.remove('active');
+            body.classList.remove('lock');
+        });
+    });
+};
 
-// Initialize Swiper
+// Swiper swiper
+
 var swiper = new Swiper(".catalog__swiper", {
     slidesPerView: 1,
     spaceBetween: 10,
@@ -64,7 +66,6 @@ var swiper = new Swiper(".catalog__swiper", {
             spaceBetween: 20,
         },
     },
-    
 });
 
 var swiper = new Swiper(".feedback__swiper", {
@@ -108,10 +109,9 @@ var swiper = new Swiper(".feedback__swiper", {
             spaceBetween: 20,
         },
     },
-    
 });
 
-/*Modal-window*/
+// Modal-window
 
 const modalBtn = document.querySelector('.modal-open');
 const modal = document.querySelector('.modal');
@@ -119,56 +119,86 @@ const modalBtnClose = document.querySelector('.modal__close-btn');
 
 modalBtn.addEventListener('click', () =>{
     modal.classList.add('modal_active');
-    
+    body.classList.add('lock');
 });
 
 modalBtnClose.addEventListener('click', () =>{
-    modal.classList.remove('modal_active')
-})
+    modal.classList.remove('modal_active');
+    body.classList.remove('lock');
+});
 
+// Catalog cards
 
-    // Функция ymaps API
-    ymaps.ready(init);
-    function init(){
-        // Создание карты.
-        var myMap = new ymaps.Map("map", {
-            // Координаты центра карты.
-            center: [55.768061, 37.591854],
-            // Уровень масштабирования. Допустимые значения: от 0 (весь мир) до 19.
-            zoom: 15
-        }, 
-        
-        {
-            searchControlProvider: 'yandex#search'
-        }),
-        
-        myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-            hintContent: 'RealHouse здесь',
-            balloonContent: 'RealHouse'
-        }, {
-            // Опции.
-            // Необходимо указать данный тип макета.
-            iconLayout: 'default#image',
-            // Своё изображение иконки метки.
-            iconImageHref: './img/location/pin.png',
-            // Размеры метки.
-            iconImageSize: [200, 200],
-            // Смещение левого верхнего угла иконки относительно (точки привязки).
-            iconImageOffset: [-100, -100]
-        });
+const cardBtns = document.querySelectorAll('.card__btn');
+const cards = document.querySelectorAll('.catalog__slide');
+const modalCard = document.querySelector('.modal-card');
 
-        myMap.behaviors
-        // Отключаем часть включенных по умолчанию поведений:
-        //  - drag - перемещение карты при нажатой левой кнопки мыши;
-        //  - magnifier.rightButton - увеличение области, выделенной правой кнопкой мыши.
-        .disable(['drag', 'rightMouseButtonMagnifier'])
-
-        // Изменяем свойство поведения с помощью опции:
-        // изменение масштаба колесом прокрутки будет происходить медленно,
-        // на 1/2 уровня масштабирования в секунду.
-        myMap.options.set('scrollZoomSpeed', 0.5);
-
-        myMap.geoObjects
-
-        .add(myPlacemark)
+    for (let i = 0; i < cards.length; ++i) {
+        cards[i].addEventListener('mouseover', () =>{
+            for (let j = 0; j < cardBtns.length; j++){
+                if(i === j){
+                    cardBtns[i].classList.add('card__btn-active');
+                    cardBtns[i].addEventListener('click', () => {
+                        modalCard.classList.add('modal__card-active');
+                        body.classList.add('lock');
+                    })
+                }
+            }
+        })
     }
+
+    for (let i = 0; i < cards.length; ++i) {
+        cards[i].addEventListener('mouseout', () =>{
+            for (let j = 0; j < cardBtns.length; j++){
+                if(i === j){
+                    cardBtns[i].classList.remove('card__btn-active');
+                }
+            }
+        })
+    }
+    
+
+// Ymaps API
+
+ymaps.ready(init);
+function init(){
+    // Создание карты.
+    var myMap = new ymaps.Map("map", {
+        // Координаты центра карты.
+        center: [55.768061, 37.591854],
+        // Уровень масштабирования. Допустимые значения: от 0 (весь мир) до 19.
+        zoom: 15,
+    }, 
+        
+    {
+        searchControlProvider: 'yandex#search',
+    }),
+        
+    myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+        hintContent: 'RealHouse здесь',
+        balloonContent: 'RealHouse',
+    }, {
+        // Опции. Необходимо указать данный тип макета.
+        iconLayout: 'default#image',
+        // Своё изображение иконки метки.
+        iconImageHref: './img/location/pin.png',
+        // Размеры метки.
+        iconImageSize: [200, 200],
+        // Смещение левого верхнего угла иконки относительно (точки привязки).
+        iconImageOffset: [-100, -100],
+    });
+
+    myMap.behaviors
+    // Отключаем часть включенных по умолчанию поведений:
+    //  - drag - перемещение карты при нажатой левой кнопки мыши;
+    //  - magnifier.rightButton - увеличение области, выделенной правой кнопкой мыши.
+    .disable(['drag', 'rightMouseButtonMagnifier']);
+
+    // Изменяем свойство поведения с помощью опции:
+    // изменение масштаба колесом прокрутки будет происходить медленно,
+    // на 1/2 уровня масштабирования в секунду.
+    myMap.options.set('scrollZoomSpeed', 0.5);
+
+    myMap.geoObjects.add(myPlacemark);
+}
+
