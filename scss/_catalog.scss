@@ -54,6 +54,7 @@
         font-family: $font-Gilroy;
         position: relative;
         z-index: 10;
+        overflow: hidden;
         
         &:after {
             content: '';
@@ -64,21 +65,47 @@
             left: 0;
             background: linear-gradient(to bottom, transparent 0%,  rgba(0,0,0,0.5) 50%);
             z-index: -1;
+        }
+        
+        /*меняем фон и вид карточки при наведении*/
+        &:hover{
+            &::before {
+                content: '';
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0; 
+                left: 0;
+                z-index: -1;
+                background: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.62) 30%);
+            }
 
-            // &:hover{
-            //     background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.62) 0%);
-            // }
+            & .card{
+
+                &__block{
+                    transform: translateY(0);
+                }
+            }
         }
     }
 }
 
+
 .card {
+    
+    &__block{
+        transform: translateY(107px);
+        transition: transform .3s;
+    }
+    
     &__info{
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         padding: 35px 30px 32px 35px;
         height: 100%;
+        
+        
     }
     
     &__img {
@@ -101,6 +128,7 @@
         font-weight: 700;
         letter-spacing: 1.92px;
         text-transform: uppercase;
+        align-self: self-start;
 
         @media(max-width: 425px){
             text-align: center;
@@ -143,7 +171,7 @@
 
     &__btn{
         margin-top: 20px;
-        display: none;
+        // display: none;
 
         &-active{
             display: block;

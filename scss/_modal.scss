@@ -98,6 +98,10 @@
 
 
 .modal {
+
+    &__wrap-card{
+        padding-top: 60px;
+    }
     
     &-card{
         display: none;
@@ -210,5 +214,6 @@
     width: 45%;
     gap: 20px;
 }
+
 
 

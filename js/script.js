@@ -117,6 +117,9 @@ const modalBtn = document.querySelector('.modal-open');
 const modal = document.querySelector('.modal');
 const modalBtnClose = document.querySelector('.modal__close-btn');
 
+const modalDone = document.querySelector('.modal__done');
+const modalBtnConsult = document.querySelector('.btn');
+
 modalBtn.addEventListener('click', () =>{
     modal.classList.add('modal_active');
     body.classList.add('lock');
@@ -126,6 +129,16 @@ modalBtnClose.addEventListener('click', () =>{
     modal.classList.remove('modal_active');
     body.classList.remove('lock');
 });
+
+modalBtnConsult.addEventListener('click', () => {
+    // alert(12)
+    // modalDone.classList.add('modal_active');
+    // modal.classList.remove('modal_active');
+
+});
+
+
+
 
 // Catalog cards
 

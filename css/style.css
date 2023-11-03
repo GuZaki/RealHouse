@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*fonts*/
 @import url("https://fonts.googleapis.com/css?family=IBM+Plex+Sans:regular,500,600");
 @font-face {
@@ -947,6 +948,8 @@ button:active {
   font-family: "Gilroy", sans-serif;
   position: relative;
   z-index: 10;
+  overflow: hidden;
+  /*меняем фон и вид карточки при наведении*/
 }
 .catalog__card:after {
   content: "";
@@ -958,7 +961,24 @@ button:active {
   background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.5) 50%);
   z-index: -1;
 }
+.catalog__card:hover::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.62) 30%);
+}
+.catalog__card:hover .card__block {
+  transform: translateY(0);
+}
 
+.card__block {
+  transform: translateY(107px);
+  transition: transform 0.3s;
+}
 .card__info {
   display: flex;
   flex-direction: column;
@@ -986,6 +1006,7 @@ button:active {
   font-weight: 700;
   letter-spacing: 1.92px;
   text-transform: uppercase;
+  align-self: self-start;
 }
 @media (max-width: 425px) {
   .card__price {
@@ -1027,7 +1048,6 @@ button:active {
 }
 .card__btn {
   margin-top: 20px;
-  display: none;
 }
 .card__btn-active {
   display: block;
@@ -1809,6 +1829,9 @@ button:active {
   }
 }
 
+.modal__wrap-card {
+  padding-top: 60px;
+}
 .modal-card {
   display: none;
 }
