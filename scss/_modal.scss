@@ -94,6 +94,12 @@
             top: -60px;
         } 
     }
+
+    &__done{
+        &_active{
+            display: block;
+        }
+    }
 }
 
 
@@ -101,6 +107,7 @@
 
     &__wrap-card{
         padding-top: 60px;
+        background-color: none;
     }
     
     &-card{
@@ -215,5 +222,8 @@
     gap: 20px;
 }
 
+.fancybox-content {
+    background-color: rgba(#000, 0.5);
+}
 
 

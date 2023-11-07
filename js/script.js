@@ -118,11 +118,16 @@ const modal = document.querySelector('.modal');
 const modalBtnClose = document.querySelector('.modal__close-btn');
 
 const modalDone = document.querySelector('.modal__done');
-const modalBtnConsult = document.querySelector('.btn');
+const modalBtnConsult = document.querySelector('.done');
 
 modalBtn.addEventListener('click', () =>{
     modal.classList.add('modal_active');
     body.classList.add('lock');
+});
+
+modalBtnConsult.addEventListener('click', () => {
+    modalDone.classList.add('modal__done_active');
+
 });
 
 modalBtnClose.addEventListener('click', () =>{
@@ -130,27 +135,27 @@ modalBtnClose.addEventListener('click', () =>{
     body.classList.remove('lock');
 });
 
-modalBtnConsult.addEventListener('click', () => {
-    // alert(12)
-    // modalDone.classList.add('modal_active');
-    // modal.classList.remove('modal_active');
-
-});
-
-
 
 
 // Catalog cards
 
+// $('.card__btn').click(function(){
+// 	$.fancybox.open({
+// 		src: '#hidden',
+// 		type: 'inline'
+// 	});
+// });
+
 const cardBtns = document.querySelectorAll('.card__btn');
 const cards = document.querySelectorAll('.catalog__slide');
 const modalCard = document.querySelector('.modal-card');
+const m = document.querySelector('.modal__wrap-card');
+
 
     for (let i = 0; i < cards.length; ++i) {
         cards[i].addEventListener('mouseover', () =>{
             for (let j = 0; j < cardBtns.length; j++){
                 if(i === j){
-                    cardBtns[i].classList.add('card__btn-active');
                     cardBtns[i].addEventListener('click', () => {
                         modalCard.classList.add('modal__card-active');
                         body.classList.add('lock');
@@ -160,16 +165,17 @@ const modalCard = document.querySelector('.modal-card');
         })
     }
 
-    for (let i = 0; i < cards.length; ++i) {
-        cards[i].addEventListener('mouseout', () =>{
-            for (let j = 0; j < cardBtns.length; j++){
-                if(i === j){
-                    cardBtns[i].classList.remove('card__btn-active');
-                }
-            }
-        })
-    }
-    
+m.addEventListener('click', ()=> {
+    modalCard.classList.remove('modal__card-active');
+    body.classList.remove('lock');
+
+})
+
+modalBtn.addEventListener('click', ()=> {
+    modalDone.classList.remove('modal__card-active');
+    body.classList.remove('lock');
+})
+
 
 // Ymaps API
 

@@ -37,7 +37,6 @@ body {
   position: relative;
 }
 body.lock {
-  height: 100vh;
   overflow: hidden;
 }
 
@@ -1828,9 +1827,13 @@ button:active {
     top: -60px;
   }
 }
+.modal__done_active {
+  display: block;
+}
 
 .modal__wrap-card {
   padding-top: 60px;
+  background-color: none;
 }
 .modal-card {
   display: none;
@@ -1927,4 +1930,8 @@ button:active {
   align-items: center;
   width: 45%;
   gap: 20px;
+}
+
+.fancybox-content {
+  background-color: rgba(0, 0, 0, 0.5);
 }/*# sourceMappingURL=style.css.map */
